@@ -1,24 +1,28 @@
 {
-  "name": "stefanoaltavista.com",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.5"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
-  }
+    "name": "stefanoaltavista.com",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@gsap/react": "^2.1.1",
+        "@prisma/client": "^5.18.0",
+        "gsap": "^3.12.5",
+        "next": "14.2.5",
+        "p5": "^1.10.0",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-p5-wrapper": "^4.1.2",
+        "typewriter-effect": "^2.21.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "typescript": "^5"
+    }
 }
