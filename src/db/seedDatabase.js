@@ -5,29 +5,30 @@ async function main() {
     // Insert multiple records
     const users = await prisma.projects.createMany({
         data: [
-            {
-                name: "about",
-                title: "About S.A.M. ",
-                subtitle: "Full-stack Web Developer",
-                url: "./",
-                gitHub: "https://github.com/StefAltavista",
-                images: ["/images/about/Logo.png"],
-                background: "rgb(255, 85, 85,0.5)",
-                color: "rgb(0, 0, 0)",
-                functionality: "",
-                description:
-                    "With a background in Electronics and Information Technology Stefano Altavista Mascitti is a Web and App developer with a highly creative and innovative drive. The past studies in Telecommunication Systems and languages such as C, C++, Java and PHP, the recent study of Javascript and many associate libraries and frameworks, joined with his artistic path as Musician and a Graphic designer makes S.A.M by every means a complete full stack web developer.",
-                technologies:
-                    "Javascript - Typescript - Node.js - Next.js - React - React Native - Vue.js - Tailwind - CSS - HTML - SQL - noSQL - PostgreSQL - MongoDB - Golang - C - Java - Apache - NginX - Linux",
-            },
+            // {
+            //     name: "about",
+            //     title: "About S.A.M. ",
+            //     subtitle: "Full-stack Web Developer",
+            //     url: "./",
+            //     gitHub: "https://github.com/StefAltavista",
+            //     logo: ["/images/about/Logo.png"],
+            //     images: [],
+            //     background: "rgb(255, 85, 85,0.5)",
+            //     color: "rgb(0, 0, 0)",
+            //     functionality: "",
+            //     description:
+            //         "With a background in Electronics and Information Technology Stefano Altavista Mascitti is a Web and App developer with a highly creative and innovative drive. The past studies in Telecommunication Systems and languages such as C, C++, Java and PHP, the recent study of Javascript and many associate libraries and frameworks, joined with his artistic path as Musician and a Graphic designer makes S.A.M by every means a complete full stack web developer.",
+            //     technologies:
+            //         "Javascript - Typescript - Node.js - Next.js - React - React Native - Vue.js - Tailwind - CSS - HTML - SQL - noSQL - PostgreSQL - MongoDB - Golang - C - Java - Apache - NginX - Linux",
+            // },
             {
                 name: "beingbody",
                 title: "Being Body",
                 subtitle: "Massage therapist business website",
                 url: "https://beingbody.net",
                 gitHub: "https://github.com/StefAltavista/beingBody",
+                logo: "/images/beingbody/Logo.png",
                 images: [
-                    "/images/beingbody/Logo.png",
                     "/images/beingbody/1.png",
                     "/images/beingbody/2.png",
                     "/images/beingbody/3.png",
@@ -47,8 +48,8 @@ async function main() {
                 subtitle: "Artist showcase platform",
                 url: "https://konigrimm.com",
                 gitHub: "https://github.com/StefAltavista/koni_gallery",
+                logo: "/images/konigrimm/Logo.png",
                 images: [
-                    "/images/konigrimm/Logo.png",
                     "/images/konigrimm/1.png",
                     "/images/konigrimm/2.png",
                     "/images/konigrimm/3.png",
@@ -68,6 +69,7 @@ async function main() {
                 subtitle: "Image manipulator and NFT minter",
                 url: "https://wrongimage.art",
                 gitHub: "https://github.com/StefAltavista/Wrong-Image",
+                logo: "/images/wrongimage/Logo.png",
                 images: [
                     "/images/wrongimage/Logo.png",
                     "/images/wrongimage/1.png",
@@ -92,8 +94,8 @@ async function main() {
                 subtitle: "Social Network for promoters & event Calendar",
                 url: "/",
                 gitHub: "https://github.com/StefAltavista/noises",
+                logo: "/images/noises/Logo.png",
                 images: [
-                    "/images/noises/Logo.png",
                     "/images/noises/2.png",
                     "/images/noises/3.png",
                     "/images/noises/4.png",
@@ -116,7 +118,8 @@ async function main() {
                 subtitle: "Artist Blog and Business website",
                 url: "/",
                 gitHub: "https://github.com/StefAltavista/avaink",
-                images: ["/images/avaink/Logo.png", "/images/avaink/1.png"],
+                logo: "/images/avaink/Logo.png",
+                images: ["/images/avaink/1.png"],
                 background: "rgb(200, 100, 50)",
                 color: "rgb(0, 0, 0)",
                 functionality:
@@ -131,10 +134,8 @@ async function main() {
                 subtitle: "Web Synthesizer",
                 url: "https://www.ultraviolet-synth.xyz",
                 gitHub: "https://github.com/StefAltavista/ultraviolet",
-                images: [
-                    "/images/ultraviolet/Logo.png",
-                    "/images/ultraviolet/1.png",
-                ],
+                logo: "/images/ultraviolet/Logo.png",
+                images: ["/images/ultraviolet/1.png"],
                 background: "rgb(200, 100, 100)",
                 color: "rgb(0, 0, 0)",
                 functionality:
@@ -149,8 +150,8 @@ async function main() {
                 subtitle: "Image Gallery",
                 url: "./",
                 gitHub: "https://github.com/StefAltavista/imageBoard",
+                logo: "/images/wrongimageboard/Logo.png",
                 images: [
-                    "/images/wrongimageboard/Logo.png",
                     "/images/wrongimageboard/2.png",
                     "/images/wrongimageboard/3.png",
                 ],
@@ -170,8 +171,8 @@ async function main() {
                 subtitle: "User based petition website with animations ",
                 url: "./",
                 gitHub: "https://github.com/StefAltavista/animate",
+                logo: "/images/animate/Logo.png",
                 images: [
-                    "/images/animate/Logo.png",
                     "/images/animate/1.png",
                     "/images/animate/2.png",
                     "/images/animate/3.png",
@@ -195,7 +196,8 @@ async function main() {
                     "Collection of various IOs & Android mobile applications",
                 url: "https://github.com/StefAltavista/React_Native",
                 gitHub: "https://github.com/StefAltavista/React_Native",
-                images: ["/images/mobileapps/logo.png"],
+                logo: "/images/mobileapps/Logo.png",
+                images: [],
                 background: "rgb(240, 196, 108)",
                 color: "rgb(0, 0, 0)",
                 functionality: "IOs and Android mobile applications",
@@ -210,7 +212,8 @@ async function main() {
                 subtitle: "Portfolio page",
                 url: "./",
                 gitHub: "https://github.com/StefAltavista",
-                images: ["/images/this/Logo.png"],
+                logo: "/images/this/Logo.png",
+                images: [],
                 background: "rgb(193, 255, 127)",
                 color: "rgb(0, 0, 0)",
                 functionality:

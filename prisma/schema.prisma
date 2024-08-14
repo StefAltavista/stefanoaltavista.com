@@ -19,7 +19,7 @@ model Projects {
   subtitle String
   url String
   gitHub String
-  logo String[]
+  logo String
   images String[]
   background String
   color String

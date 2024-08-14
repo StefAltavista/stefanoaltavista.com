@@ -5,7 +5,7 @@ CREATE TABLE "Projects" (
     "subtitle" TEXT NOT NULL,
     "url" TEXT NOT NULL,
     "gitHub" TEXT NOT NULL,
-    "logo" TEXT[],
+    "logo" TEXT NOT NULL,
     "images" TEXT[],
     "background" TEXT NOT NULL,
     "color" TEXT NOT NULL,
