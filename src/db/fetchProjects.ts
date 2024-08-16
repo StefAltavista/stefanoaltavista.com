@@ -1,9 +1,8 @@
 "use server";
 import prisma from "./client";
-export default async function fetchProjects() {
+export async function fetchAllProjects() {
     let projects;
     try {
-        // Fetch all users
         projects = await prisma.projects.findMany();
     } catch (error) {
         console.error("Error fetching projects:", error);
@@ -12,6 +11,17 @@ export default async function fetchProjects() {
     //     // Disconnect Prisma Client
     //     await prisma.$disconnect();
     // }
+
+    return projects;
+}
+
+export async function fetchSingleProject(name: string) {
+    let projects;
+    try {
+        projects = await prisma.projects.findFirst({ where: { name } });
+    } catch (error) {
+        console.error("Error fetching projects:", error);
+    }
 
     return projects;
 }

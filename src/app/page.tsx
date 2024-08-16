@@ -9,11 +9,11 @@ import NavBar from "@/components/NavBar";
 import Header from "@/components/Header";
 import ProjectsPreview from "@/components/ProjectsPreview";
 
-import fetchProjects from "@/db/fetchProjects";
+import { fetchAllProjects } from "@/db/fetchProjects";
 import ContactForm from "@/components/ContactForm";
 
 export default async function Home() {
-    const projects = await fetchProjects();
+    const projects = await fetchAllProjects();
     if (!projects) {
         return <></>;
     }
