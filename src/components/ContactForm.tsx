@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./contactForm.css";
+import { sendMessage } from "@/actions/sendMessage";
 
 export default function ContactForm() {
     const [object, setObject] = useState("");
@@ -10,30 +11,18 @@ export default function ContactForm() {
     const [sending, setSending] = useState(false);
     const [sent, setSent] = useState(false);
 
-    const sendMessage = () => {
+    const send = async () => {
+        if (!email || !content || !object) {
+            alert("Please fill out all the fields! :)");
+            return;
+        }
         setSending(true);
-        const message =
-            `<div><p>MESSAGE FROM PORTFOLIO PAGE</p>` +
-            `<strong>From:</strong><br></br><p>${email}</p>` +
-            `<strong>Object:</strong><p><br></br>${object}</p> ` +
-            `<strong>Message:</strong><br></br><p>${content}</p> </div> `;
-
-        fetch("stafanoaltavista.com/api/contact", {
-            headers: {
-                "Content-type": "application/json",
-                Authorization: "FuckYouWhatAreYouEvenTryingToGet?",
-            },
-            method: "POST",
-            body: JSON.stringify({ message }),
-        })
-            .then((res) => res.json())
-            .then(({ response }) => {
-                setResponse(response);
-                setSending(false);
-                setSent(true);
-            })
-            .catch(() => setResponse("sorry an error occured"));
+        const result = await sendMessage(email, object, content);
+        setResponse(result);
+        setSending(false);
+        setSent(true);
     };
+
     return (
         <div id="contactForm">
             <form>
@@ -70,7 +59,7 @@ export default function ContactForm() {
                             type="submit"
                             onClick={(e) => {
                                 e.preventDefault();
-                                sendMessage();
+                                send();
                             }}
                         >
                             Send
