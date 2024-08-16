@@ -11,6 +11,8 @@
     },
     "dependencies": {
         "@gsap/react": "^2.1.1",
+        "@p5-wrapper/next": "^1.0.3",
+        "@p5-wrapper/react": "^4.4.2",
         "@prisma/client": "^5.18.0",
         "gsap": "^3.12.5",
         "next": "14.2.5",

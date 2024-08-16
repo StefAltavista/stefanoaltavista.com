@@ -2,7 +2,7 @@
 import React from "react";
 import WaveComplex from "../animations/WaveComplex";
 import WaveSimple from "../animations/WaveSimple";
-import { ReactP5Wrapper } from "react-p5-wrapper";
+import { NextReactP5Wrapper } from "@p5-wrapper/next";
 
 export default function Background() {
     return (
@@ -17,18 +17,21 @@ export default function Background() {
             }}
         >
             {navigator.userAgent.includes("Chrome") ? (
-                <ReactP5Wrapper sketch={WaveComplex} id="canvas" />
+                <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />
             ) : (
                 <>
                     {navigator.userAgent.includes("iPhone") ||
                     navigator.userAgent.includes("Mozzilla") ? (
-                        <ReactP5Wrapper sketch={WaveComplex} id="canvas" />
+                        <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />
                     ) : (
                         <>
                             {alert(
                                 "Please use a different browser to unlock complex animation"
                             )}
-                            <ReactP5Wrapper sketch={WaveSimple} id="canvas" />
+                            <NextReactP5Wrapper
+                                sketch={WaveSimple}
+                                id="canvas"
+                            />
                         </>
                     )}
                 </>
