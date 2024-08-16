@@ -1,15 +1,26 @@
 "use client";
 
 import Typewriter from "typewriter-effect/dist/core";
+import { useEffect } from "react";
 
-import { useInView } from "react-intersection-observer";
-import { useEffect, useRef } from "react";
+let typewriter_intro: typeof Typewriter;
+let typewriter_contact: typeof Typewriter;
+
+const scrollLeft = () => {
+    const scrl = window.scrollY;
+
+    if (scrl / 10 > 70) {
+        typewriter_intro.start();
+    } else typewriter_intro.stop();
+
+    if (scrl / 10 > 140) {
+        typewriter_contact.start();
+    } else typewriter_contact.stop();
+};
 
 export function TW_intro() {
-    const [ref, inView, entry] = useInView({ threshold: 0.5 });
-
     useEffect(() => {
-        let typewriter_intro = new Typewriter(".typewriterIntro", {
+        typewriter_intro = new Typewriter(".typewriterIntro", {
             delay: 40,
             deleteSpeed: 20,
             wrapperClassName: "small_courier",
@@ -27,17 +38,16 @@ export function TW_intro() {
                 `<br/><br/> Welcome to my portfolio page! <br/> Here, you can explore a curated selection of my <p class="agraham">projects</p>.`
             );
 
-        if (inView) typewriter_intro.start();
-    }, [inView]);
+        window.addEventListener("scroll", scrollLeft);
+        return () => window.removeEventListener("scroll", scrollLeft);
+    }, []);
 
-    return <div ref={ref} className="typewriterIntro"></div>;
+    return <div className="typewriterIntro"></div>;
 }
 
 export function TW_contact() {
-    const [ref, inView, entry] = useInView({ threshold: 1 });
-
     useEffect(() => {
-        let typewriter_contact = new Typewriter(".typewriterContact", {
+        typewriter_contact = new Typewriter(".typewriterContact", {
             delay: 40,
             deleteSpeed: 20,
             wrapperClassName: "small_courier",
@@ -57,9 +67,9 @@ export function TW_contact() {
             .typeString(
                 `Companies seeking to hire can also <p class="agraham">request my CV</p> for further details.`
             );
+        window.addEventListener("scroll", scrollLeft);
+        return () => window.removeEventListener("scroll", scrollLeft);
+    }, []);
 
-        if (inView) typewriter_contact.start();
-    }, [inView]);
-
-    return <div ref={ref} className="typewriterContact"></div>;
+    return <div className="typewriterContact"></div>;
 }

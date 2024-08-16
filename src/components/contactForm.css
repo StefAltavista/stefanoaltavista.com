@@ -1,0 +1,21 @@
+#contactForm {
+    padding: 20px;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70vw;
+}
+
+#contactForm form {
+    background-color: rgba(141, 202, 255, 0.482);
+    padding: 20px;
+}
+
+#contactForm form div textarea {
+    height: 300px;
+    width: 60%;
+}
+
+#contactForm form div input {
+    width: 60%;
+}

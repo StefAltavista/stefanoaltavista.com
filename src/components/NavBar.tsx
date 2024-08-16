@@ -1,22 +1,18 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import type { Projects } from "@prisma/client";
+
 import "./navBar.css";
 
 type NavBarOptions = {
     location: string;
+    background: string;
+    color: string;
 };
 
-export default function NavBar({
-    projects,
-    options,
-}: {
-    projects: Projects[];
-    options: NavBarOptions;
-}) {
-    const [bg, setBg] = useState("rgb(0, 0, 0,0)");
-    const [co, setCo] = useState("rgb(141, 202, 255)");
+export default function NavBar({ options }: { options: NavBarOptions }) {
+    const [bg, setBg] = useState(options.background);
+    const [co, setCo] = useState(options.color);
 
     const { location } = options;
     const navBarScroll = useRef<HTMLInputElement>(null);
@@ -37,22 +33,9 @@ export default function NavBar({
     };
 
     useEffect(() => {
-        if (projects && location != "/" && location != "/contact") {
-            console.log("Projects", projects);
-            const currentProj = projects.find(
-                (x) => x.name == location.replace("/", "")
-            );
-            if (currentProj) {
-                setBg(currentProj.background);
-                setCo(currentProj.color);
-            }
-        }
-
         if (location === "/") {
             window.addEventListener("scroll", scrollLeft);
             scrollLeft();
-            setBg("rgb(0, 0, 0,0)");
-            setCo("rgb(141, 202, 255)");
         }
         return () => window.removeEventListener("scroll", scrollLeft);
     }, [location]);
