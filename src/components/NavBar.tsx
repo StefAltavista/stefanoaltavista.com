@@ -39,12 +39,13 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
     }, []);
     return (
         <div
-            id={location === "/" ? "navBarScroll" : "navBarFixed"}
+            className={location === "/" ? "navBarScroll" : "navBarFixed"}
+            id="navBar"
             style={{ background: bg, letterSpacing: "2px" }}
             ref={navBarScroll}
         >
             {location == "/" ? (
-                <>
+                <div className="navBar_title">
                     <p
                         className="agraham mix_blend"
                         onClick={() => {
@@ -53,25 +54,28 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
                     >
                         Stefano<br></br>Altavista<br></br>Mascitti<br></br>
                     </p>
-                </>
+                </div>
             ) : (
-                <>
-                    <Link href="/" style={{ color: co }}>
-                        <p>Home</p>
+                <div className="navBar_title">
+                    <Link href="/">
+                        <p className="agraham " style={{ color: co }}>
+                            Stefano Altavista Mascitti
+                        </p>
                     </Link>
-                </>
+                </div>
             )}
+            <div className="navBar_links">
+                <Link href="/projects" style={{ color: co }}>
+                    <p>Projects</p>
+                </Link>
 
-            <Link href="/projects" style={{ color: co }}>
-                <p>Projects</p>
-            </Link>
-
-            <Link href="/about" style={{ color: co }}>
-                <p>About </p>{" "}
-            </Link>
-            <Link href="/contact" style={{ color: co }}>
-                <p>Contact</p>{" "}
-            </Link>
+                <Link href="/about" style={{ color: co }}>
+                    <p>About</p>
+                </Link>
+                <Link href="/contact" style={{ color: co }}>
+                    <p>Contact</p>
+                </Link>
+            </div>
         </div>
     );
 }

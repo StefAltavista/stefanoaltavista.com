@@ -30,7 +30,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-
     letter-spacing: 3px;
     height: 100%;
     width: auto;
@@ -53,11 +52,16 @@
 #homeBody {
     margin-left: 10%;
 }
+.home_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .home_about {
     margin-bottom: 50px;
     margin-top: 30px;
     position: relative;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,4 +156,8 @@
     cursor: default;
     transition: 500ms;
     margin-bottom: 100px;
+}
+.vertical_spacer {
+    height: 100px;
+    width: 0px;
 }

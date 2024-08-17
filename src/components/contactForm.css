@@ -1,9 +1,8 @@
 #contactForm {
-    padding: 20px;
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
-    width: 70vw;
+    width: 60vw;
 }
 
 #contactForm form {

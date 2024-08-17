@@ -31,18 +31,20 @@ export default async function Home() {
             <div id="homeBody">
                 <div className="home_about">
                     <div className="introText">
-                        {projects && (
-                            <img
-                                src={projects[0].logo[0]}
-                                id="home_about_img"
-                            />
-                        )}
+                        <Image
+                            src="/image/about/logo"
+                            width={200}
+                            height={200}
+                            alt="S.A.M."
+                        />
                         <div id="typeWriterText_intro" className="typewriter">
                             <TW_intro />
                         </div>
                     </div>
                 </div>
-                <ProjectsPreview projects={projects} />
+                <div className="home_section">
+                    <ProjectsPreview projects={projects} />
+                </div>
 
                 <div className="home_about">
                     <div className="introText">
@@ -51,7 +53,12 @@ export default async function Home() {
                         </div>
                     </div>
                 </div>
-                <ContactForm />
+                <div className="home_section">
+                    <div className="vertical_spacer"></div>
+                    <p className="agraham">Send me a message</p>
+                    <ContactForm />
+                    <div className="vertical_spacer"></div>
+                </div>
             </div>
         </div>
     );

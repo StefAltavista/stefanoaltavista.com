@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { type Projects as Project } from "@prisma/client";
+import "./projectCard.css";
 
 export default function ProjectCard({ project }: { project: Project }) {
     return (
         <Link href={`./projects/${project.name}`}>
             <div
-                id="projectPreview"
+                id="projectCard"
                 style={{
                     background: project.background
                         .replace("rgb", "rgba")

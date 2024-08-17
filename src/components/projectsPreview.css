@@ -3,11 +3,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: aquamarine;
+    color: rgb(141, 202, 255);
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-#home_projects p {
-    margin-top: 30px;
+.home_project_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    border-top: 1px solid rgb(141, 202, 255);
+    width: 60vw;
+    text-align: center;
 }
 #home_projects div {
     display: flex;
@@ -23,5 +31,6 @@
 #home_projects div img {
     border-radius: 50%;
     max-width: 20vw;
+    max-height: 20vw;
     margin: 10px;
 }

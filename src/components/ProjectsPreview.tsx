@@ -19,7 +19,7 @@ export default function ProjectsPreview({
     ];
     return (
         <div id="home_projects">
-            <p className="agraham">Latest works</p>
+            <p className="agraham home_project_section">Latest works</p>
             <div>
                 {latestProj.map((x, idx) => (
                     <div key={idx}>
@@ -29,19 +29,24 @@ export default function ProjectsPreview({
                                 src={x.logo}
                                 width={500}
                                 height={500}
-                                alt="Picture of the author"
+                                alt={x.title + " logo"}
                             />
                         </div>
                     </div>
                 ))}
             </div>
-            <p className="agraham">Creative Ventures</p>
+            <p className="agraham home_project_section">Creative Ventures</p>
             <div>
                 {creativeProj.map((x, idx) => (
                     <div key={idx}>
                         <p>{x.title}</p>
                         <div>
-                            <img src={x.logo} />
+                            <Image
+                                src={x.logo}
+                                width={200}
+                                height={200}
+                                alt={x.title + " logo"}
+                            />
                         </div>
                     </div>
                 ))}

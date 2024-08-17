@@ -13,6 +13,7 @@ export default function Background() {
                 minHeight: "550px",
                 position: "fixed",
                 top: 0,
+                left: 0,
                 zIndex: -2,
             }}
         >

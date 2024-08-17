@@ -1,0 +1,28 @@
+#projectCard {
+    margin-left: 70px;
+    position: relative;
+    width: 250px;
+    padding: 20px;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: default;
+    transition: 500ms;
+    margin-bottom: 100px;
+}
+
+#projectCard p {
+    text-align: center !important;
+}
+#projLogo {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 100);
+    cursor: pointer;
+}
