@@ -1,0 +1,27 @@
+#home_projects {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aquamarine;
+}
+
+#home_projects p {
+    margin-top: 30px;
+}
+#home_projects div {
+    display: flex;
+    justify-content: center;
+}
+
+#home_projects div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home_projects div img {
+    border-radius: 50%;
+    max-width: 20vw;
+    margin: 10px;
+}

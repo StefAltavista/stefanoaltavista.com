@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import dynamic from "next/dynamic";
+import Footer from "@/components/Footer";
 const Background = dynamic(() => import("@/components/Background"), {
     ssr: false,
 });
@@ -24,6 +25,7 @@ export default function RootLayout({
             <body className={inter.className}>
                 <Background />
                 {children}
+                <Footer />
             </body>
         </html>
     );

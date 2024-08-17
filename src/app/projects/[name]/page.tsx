@@ -2,6 +2,7 @@ import { fetchSingleProject } from "@/db/fetchProjects";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
+import "./project.css";
 
 type projectPageParams = {
     params: { name: string };

@@ -19,7 +19,7 @@ export default async function Home() {
     }
 
     return (
-        <>
+        <div id="home">
             <NavBar
                 options={{
                     location: "/",
@@ -53,6 +53,6 @@ export default async function Home() {
                 </div>
                 <ContactForm />
             </div>
-        </>
+        </div>
     );
 }

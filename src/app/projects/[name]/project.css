@@ -1,0 +1,91 @@
+#head {
+    display: flex;
+    flex-direction: column;
+}
+#head h3 {
+    font-size: 35px;
+}
+#head p {
+    font-size: 15px;
+}
+
+#projLogo {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 100);
+    cursor: pointer;
+}
+
+#pList {
+    position: relative;
+    font-size: 14px;
+    padding-left: 20px;
+    transition: 1s;
+}
+#pList p {
+    padding-top: 10px;
+}
+
+#project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#projBody {
+    transform: translateX(20px);
+    background-color: rgba(0, 0, 0, 0.611);
+    transition: 1s;
+    text-align: center;
+    margin-left: 150px;
+    padding-left: 20px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    z-index: 1;
+    width: 100%;
+}
+#pTitle {
+    font-size: 30px;
+}
+
+#pTop {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    object-fit: scale-down;
+}
+#pInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+#pDescription {
+    padding-left: 20px;
+
+    text-align: justify;
+}
+#links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#pImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pImg {
+    border: 1px solid rgb(215, 216, 215);
+    margin: 20px;
+    width: 500px;
+    object-fit: scale-down;
+}

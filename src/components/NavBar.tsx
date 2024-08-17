@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 
 import "./navBar.css";
@@ -11,8 +11,8 @@ type NavBarOptions = {
 };
 
 export default function NavBar({ options }: { options: NavBarOptions }) {
-    const [bg, setBg] = useState(options.background);
-    const [co, setCo] = useState(options.color);
+    const bg = options.background;
+    const co = options.color;
 
     const { location } = options;
     const navBarScroll = useRef<HTMLInputElement>(null);
@@ -20,28 +20,25 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
     const scrollLeft = () => {
         const scrl = window.scrollY;
         if (navBarScroll.current) {
-            if (scrl / 10 < 30) {
-                navBarScroll.current.style.left = -30 + scrl / 10 + "%";
-
-                let opct = scrl / 100;
-                navBarScroll.current.style.opacity = opct.toString();
+            if (scrl > window.innerHeight - 200) {
+                navBarScroll.current.style.opacity = "1";
             } else {
-                (navBarScroll.current.style.left = "0%"),
-                    (navBarScroll.current.style.opacity = "1");
+                navBarScroll.current.style.opacity = "0";
             }
         }
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         if (location === "/") {
             window.addEventListener("scroll", scrollLeft);
             scrollLeft();
+
+            return () => window.removeEventListener("scroll", scrollLeft);
         }
-        return () => window.removeEventListener("scroll", scrollLeft);
-    }, [location]);
+    }, []);
     return (
         <div
-            className={location === "/" ? "offScreenNavBar" : "onScreenNavBar"}
             id={location === "/" ? "navBarScroll" : "navBarFixed"}
             style={{ background: bg, letterSpacing: "2px" }}
             ref={navBarScroll}

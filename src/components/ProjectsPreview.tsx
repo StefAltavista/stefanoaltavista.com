@@ -1,14 +1,13 @@
 import type { Projects } from "@prisma/client";
 import Image from "next/image";
 
-import type { InferGetStaticPropsType, GetStaticProps } from "next";
+import "./projectsPreview.css";
 
 export default function ProjectsPreview({
     projects,
 }: {
     projects: Projects[];
 }) {
-    console.log("component", projects);
     if (!projects) {
         return <p>Error fetching data</p>;
     }
