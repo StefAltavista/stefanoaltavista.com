@@ -1,0 +1,35 @@
+#contact {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(151, 255, 255);
+}
+
+#contact_body {
+    padding: 20px;
+    margin: auto;
+    margin-bottom: auto;
+    width: 90vw;
+    background-color: rgba(58, 84, 107, 0.707);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#contact_text {
+    margin: 40px;
+    width: 40%;
+}
+
+#contact_text p {
+    display: inline;
+    text-align: justify;
+}
+
+#contact_form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+}

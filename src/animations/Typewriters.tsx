@@ -2,7 +2,7 @@
 
 import Typewriter from "typewriter-effect/dist/core";
 import { useEffect } from "react";
-
+import "./typewriters.css";
 let typewriter_intro: typeof Typewriter;
 let typewriter_contact: typeof Typewriter;
 

@@ -1,86 +1,17 @@
-#header {
-    min-height: 100vh;
-}
-#nameTitle a {
-    color: rgb(141, 202, 255);
-}
-#sam {
-    left: 0px;
-    position: fixed;
-    top: 0%;
-    color: rgb(141, 202, 255);
-    display: flex;
-    min-height: 550px;
-    flex-direction: column;
-    width: 100%;
-    z-index: 3;
-}
-
-#nameTitle {
-    margin-bottom: 20%;
-}
-
-#projectsTitle {
-    z-index: 1;
-    position: fixed;
-    top: -2%;
-    left: -100%;
-    background-color: rgb(0, 0, 0);
-    color: rgb(141, 202, 255);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    letter-spacing: 3px;
-    height: 100%;
-    width: auto;
-    font-size: 20px;
-    padding: 10px;
-}
-
-#sam h3 {
-    font-size: 60px;
-    margin-left: 20px;
-    margin-bottom: 0;
-    margin-left: 50px;
-}
-#sam p {
-    font-size: 20px;
-    margin-left: 50px;
-    margin-top: 0;
-}
-
 #homeBody {
-    margin-left: 10%;
+    padding-left: 170px;
+    width: 100vw;
 }
 .home_section {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.home_about {
-    margin-bottom: 50px;
-    margin-top: 30px;
-    position: relative;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    height: 100vh;
+    /* overflow: scroll; */
 }
 
-.typewriter {
-    font-family: "Courier New" !important;
-    width: 60vw;
-    padding: 40px;
-    text-align: justify;
-    transition: max-height 1s ease-in-out;
-}
-.expanded {
-    max-height: 2000px;
-}
-
-.typewriter p {
-    display: inline;
-}
 .introText {
     padding: 40px;
     display: flex;
@@ -134,30 +65,4 @@
     width: 100px;
     margin: 20px;
     object-fit: contain;
-}
-#board {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#projectPreview {
-    margin-left: 70px;
-    position: relative;
-    width: 50vw;
-    height: 30vh;
-    min-height: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    cursor: default;
-    transition: 500ms;
-    margin-bottom: 100px;
-}
-.vertical_spacer {
-    height: 100px;
-    width: 0px;
 }

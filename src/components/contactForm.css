@@ -1,20 +1,21 @@
 #contactForm {
     z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60vw;
+    min-width: 300px;
+    width: 30%;
 }
 
 #contactForm form {
-    background-color: rgba(141, 202, 255, 0.482);
-    padding: 20px;
+    font-family: Courier, "Courier New", monospace;
+    font-size: 17px !important;
+    letter-spacing: 5px;
+    color: rgb(141, 202, 255);
 }
 
 #contactForm form div textarea {
     height: 300px;
-    width: 60%;
+    width: 100%;
 }
 
 #contactForm form div input {
-    width: 60%;
+    width: 100%;
 }

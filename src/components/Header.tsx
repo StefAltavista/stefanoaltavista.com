@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import "./header.css";
 
 export default function Header() {
     const nameTitle = useRef<HTMLInputElement>(null);
@@ -13,12 +14,12 @@ export default function Header() {
     const sam = useRef<HTMLInputElement>(null);
 
     useGSAP(() => {
-        gsap.from(nameTitle.current, { opacity: 0, duration: 4, delay: 0 });
-        gsap.from(nameSubTitle.current, { x: "100%", duration: 4, delay: 0 });
+        gsap.from(nameTitle.current, { opacity: 0, duration: 4, delay: 2 });
+        gsap.from(nameSubTitle.current, { x: "100%", duration: 4, delay: 3 });
         gsap.from(nameDescription.current, {
             y: "1000%",
-            duration: 4,
-            delay: 0,
+            duration: 3,
+            delay: 3,
         });
     }, []);
     useEffect(() => {
@@ -44,7 +45,7 @@ export default function Header() {
                             <div ref={nameTitle} id="nameTitleInline">
                                 <h3 className="agraham">S . A . M .</h3>
                                 <p ref={nameSubTitle} className="small_courier">
-                                    Full Stack Developer & I.T. Specialist
+                                    Full Stack Developer & Web Designer
                                 </p>
                             </div>
                         </Link>

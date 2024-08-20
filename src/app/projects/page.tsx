@@ -6,16 +6,16 @@ import "./projects.css";
 
 export default async function Projects() {
     const projects = await fetchAllProjects();
-
     return (
-        // <div id="projects" style={{ display: "flex", flexDirection: "row" }}>
         <div id="projects">
             <NavBar
                 options={{ location: "/projects", color: "", background: "" }}
             />
+
             <div id="projects_body">
-                <p className="agraham">Projects</p>
                 <div className="projects_board">
+                    <h1 className="agraham">Projects</h1>
+
                     {projects?.map((x) => (
                         <ProjectCard project={x} />
                     ))}

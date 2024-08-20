@@ -1,0 +1,11 @@
+.typewriter {
+    font-family: "Courier New" !important;
+    width: 60vw;
+    padding: 40px;
+    text-align: justify;
+    transition: max-height 1s ease-in-out;
+}
+
+.typewriter p {
+    display: inline;
+}

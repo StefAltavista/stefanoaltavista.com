@@ -23,9 +23,11 @@ export default async function Home() {
                     background: "rgb(0, 0, 0,0)",
                 }}
             />
-            <Header />
+            <div className="home_section">
+                <Header />
+            </div>
             <div id="homeBody">
-                <div className="home_about">
+                <div className="home_section home_about">
                     <div className="introText">
                         <Image
                             src="/image/about/logo"
@@ -42,7 +44,7 @@ export default async function Home() {
                     <ProjectsPreview projects={projects} />
                 </div>
 
-                <div className="home_about">
+                <div className="home_section home_about">
                     <div className="introText">
                         <div id="typeWriterText_contact" className="typewriter">
                             <TW_contact />
@@ -50,7 +52,6 @@ export default async function Home() {
                     </div>
                 </div>
                 <div className="home_section">
-                    <div className="vertical_spacer"></div>
                     <p className="agraham">Send me a message</p>
                     <ContactForm />
                     <div className="vertical_spacer"></div>

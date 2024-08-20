@@ -1,0 +1,31 @@
+#nameTitle a {
+    color: rgb(141, 202, 255);
+}
+#sam {
+    min-height: 100vh;
+    left: 0px;
+    position: fixed;
+    top: 0%;
+    color: rgb(141, 202, 255);
+    display: flex;
+    min-height: 550px;
+    flex-direction: column;
+    width: 100%;
+    z-index: 3;
+}
+
+#nameTitle {
+    margin-bottom: 20%;
+}
+
+#sam h3 {
+    font-size: 60px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    margin-left: 50px;
+}
+#sam p {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 0;
+}

@@ -44,7 +44,7 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
             style={{ background: bg, letterSpacing: "2px" }}
             ref={navBarScroll}
         >
-            {location == "/" ? (
+            {location === "/" ? (
                 <div className="navBar_title">
                     <p
                         className="agraham mix_blend"

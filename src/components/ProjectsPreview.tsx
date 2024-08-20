@@ -44,8 +44,8 @@ export default function ProjectsPreview({
             gsap.from(".hp_icon_1", {
                 scale: 0.5,
                 opacity: 0,
-                duration: 0.5,
-                ease: "power2.in",
+                duration: 0.7,
+                ease: "bounce.out",
                 stagger: { each: 0.5 },
                 scrollTrigger: {
                     trigger: ".trigger_1",
@@ -55,8 +55,8 @@ export default function ProjectsPreview({
             gsap.from(".hp_icon_2", {
                 scale: 0.5,
                 opacity: 0,
-                duration: 0.5,
-                ease: "power2.in",
+                duration: 0.7,
+                ease: "bounce.out",
                 stagger: { each: 0.5 },
                 scrollTrigger: {
                     trigger: ".trigger_2",

@@ -3,8 +3,12 @@ import React from "react";
 import WaveComplex from "../animations/WaveComplex";
 import WaveSimple from "../animations/WaveSimple";
 import { NextReactP5Wrapper } from "@p5-wrapper/next";
-
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 export default function Background() {
+    useGSAP(() => {
+        gsap.from("#background_animation", { opacity: 0, duration: 2 });
+    });
     return (
         <div
             id="background_animation"
