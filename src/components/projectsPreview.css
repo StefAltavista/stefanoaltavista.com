@@ -1,4 +1,4 @@
-#home_projects {
+#projectsPreview {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -6,6 +6,7 @@
     color: rgb(141, 202, 255);
     margin-top: 50px;
     margin-bottom: 50px;
+    transition: 1s;
 }
 
 .home_project_section {
@@ -17,20 +18,81 @@
     width: 60vw;
     text-align: center;
 }
-#home_projects div {
+.home_projects {
     display: flex;
     justify-content: center;
 }
 
-#home_projects div div {
+.home_projects div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
+}
+.home_projects div p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+}
+.home_projects div img {
+    border-radius: 50%;
+    min-width: 150px;
+    min-height: 150px;
+    width: 15vw;
+    height: 15vw;
+    margin: 15px;
+    margin-top: 5px;
+    transition: 500ms;
+    cursor: pointer;
 }
 
-#home_projects div img {
-    border-radius: 50%;
-    max-width: 20vw;
-    max-height: 20vw;
-    margin: 10px;
+.home_projects div img:hover {
+    min-width: 160px;
+    min-height: 160px;
+    width: 16vw;
+    height: 16vw;
+}
+
+.projectCard_homePreview {
+    background-color: rgba(145, 145, 145, 0.519);
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.projectCard_homePreview div {
+    margin: 0px !important;
+}
+
+.projectCard_homePreview p,
+.projectCard_homePreview a {
+    margin-bottom: 20px;
+}
+
+.projectPreview_description {
+    width: 300px;
+    padding: 20px;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px 5px rgba(0, 0, 0, 0.627);
+}
+@media only screen and (max-width: 800px) {
+    .home_projects {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
 }

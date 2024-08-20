@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Footer from "@/components/Footer";
 const Background = dynamic(() => import("@/components/Background"), {
@@ -24,6 +24,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <Background />
+
                 {children}
                 <Footer />
             </body>

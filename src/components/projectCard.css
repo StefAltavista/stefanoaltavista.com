@@ -1,17 +1,19 @@
 #projectCard {
-    margin-left: 70px;
+    margin: 35px;
     position: relative;
     width: 250px;
     padding: 20px;
-    min-height: 550px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-    cursor: default;
+    cursor: pointer;
     transition: 500ms;
     margin-bottom: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px 5px rgba(0, 0, 0, 0.627);
 }
 
 #projectCard p {

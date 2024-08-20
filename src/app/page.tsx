@@ -1,14 +1,10 @@
 import "./home.css";
 
-import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
-
 import { TW_intro, TW_contact } from "@/animations/Typewriters";
 import NavBar from "@/components/NavBar";
 import Header from "@/components/Header";
 import ProjectsPreview from "@/components/ProjectsPreview";
-
 import { fetchAllProjects } from "@/db/fetchProjects";
 import ContactForm from "@/components/ContactForm";
 

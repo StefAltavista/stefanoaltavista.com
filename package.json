@@ -20,6 +20,7 @@
         "react": "^18",
         "react-dom": "^18",
         "react-p5-wrapper": "^4.1.2",
+        "sharp": "^0.33.5",
         "typewriter-effect": "^2.21.0"
     },
     "devDependencies": {
