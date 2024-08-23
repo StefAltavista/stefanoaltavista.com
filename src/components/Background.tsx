@@ -9,6 +9,20 @@ export default function Background() {
     useGSAP(() => {
         gsap.from("#background_animation", { opacity: 0, duration: 2 });
     });
+    let render;
+    if (navigator.userAgent.includes("Chrome")) {
+        render = <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />;
+    } else if (
+        navigator.userAgent.includes("iPhone") ||
+        navigator.userAgent.includes("Mozzilla")
+    ) {
+        render = <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />;
+    } else {
+        alert(
+            "Welcome to StefanoAltavita.com - Please use a different browser to unlock complex animation"
+        );
+        render = <NextReactP5Wrapper sketch={WaveSimple} id="canvas" />;
+    }
     return (
         <div
             id="background_animation"
@@ -21,26 +35,7 @@ export default function Background() {
                 zIndex: -2,
             }}
         >
-            {navigator.userAgent.includes("Chrome") ? (
-                <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />
-            ) : (
-                <>
-                    {navigator.userAgent.includes("iPhone") ||
-                    navigator.userAgent.includes("Mozzilla") ? (
-                        <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />
-                    ) : (
-                        <>
-                            {alert(
-                                "Please use a different browser to unlock complex animation"
-                            )}
-                            <NextReactP5Wrapper
-                                sketch={WaveSimple}
-                                id="canvas"
-                            />
-                        </>
-                    )}
-                </>
-            )}
+            {render}
         </div>
     );
 }

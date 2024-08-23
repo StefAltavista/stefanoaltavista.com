@@ -65,6 +65,9 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
                 </div>
             )}
             <div className="navBar_links">
+                <Link href="/services" style={{ color: co }}>
+                    <p>Services</p>
+                </Link>
                 <Link href="/projects" style={{ color: co }}>
                     <p>Projects</p>
                 </Link>

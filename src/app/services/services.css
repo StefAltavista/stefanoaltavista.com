@@ -1,0 +1,34 @@
+#services {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(151, 255, 255);
+}
+.service_tab {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.486);
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60vw;
+    margin: 20px;
+}
+.service_tab svg {
+    margin-right: 10px;
+    color: blue;
+}
+.service_info {
+    max-height: 0;
+    transition: 1s;
+}
+.open {
+    max-height: 500px;
+    opacity: 1;
+}
+.close {
+    opacity: 0;
+}
