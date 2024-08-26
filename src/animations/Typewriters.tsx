@@ -34,9 +34,8 @@ export function TW_intro() {
             .pauseFor(800)
             .typeString(" a Web Developer based in Berlin (DE).")
             .pauseFor(800)
-            .typeString(
-                `<br/><br/> Welcome to my portfolio page! <br/> Here, you can explore a curated selection of my <p class="agraham">projects</p>.`
-            );
+            .typeString(`<br/><br/> Welcome to my website!`);
+        // .typeString(`    <br/> Here, you can explore a curated selection of my <p class="agraham">projects</p>.`);
 
         window.addEventListener("scroll", scrollLeft);
         return () => window.removeEventListener("scroll", scrollLeft);

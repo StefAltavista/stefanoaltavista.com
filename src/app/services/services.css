@@ -1,4 +1,4 @@
-#services {
+#servives_page {
     width: 100vw;
     min-height: 100vh;
     display: flex;
@@ -6,29 +6,16 @@
     align-items: center;
     color: rgb(151, 255, 255);
 }
-.service_tab {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.486);
-    cursor: pointer;
+
+.services_page_tab {
+    margin-top: 50px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 60vw;
-    margin: 20px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-wrap: wrap;
+    flex-direction: column;
 }
-.service_tab svg {
-    margin-right: 10px;
-    color: blue;
-}
-.service_info {
-    max-height: 0;
-    transition: 1s;
-}
-.open {
-    max-height: 500px;
-    opacity: 1;
-}
-.close {
-    opacity: 0;
+
+.vertical_division {
+    display: flex;
 }

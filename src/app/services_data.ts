@@ -1,10 +1,10 @@
-type Service = {
+export type Service = {
     title: string;
     icon: string;
     description: string;
     specific: { name: string; details: string }[];
 };
-const services: Service[] = [
+const services_data: Service[] = [
     {
         title: "Full Stack Development",
         icon: "/icons/fullstack_icon.svg",
@@ -80,4 +80,4 @@ const services: Service[] = [
     },
 ];
 
-export default services;
+export default services_data;

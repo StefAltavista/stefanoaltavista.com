@@ -2,62 +2,37 @@
 import { useState } from "react";
 import NavBar from "@/components/NavBar";
 import "./services.css";
-import Image from "next/image";
-import services from "./data";
+import services_data from "../services_data";
+import ServiceTab from "@/components/ServiceTab";
 
 export default function Services() {
-    const [service, setService] = useState<number>(0);
+    const [toggleInfo, setToggleInfo] = useState(0);
     return (
-        <div id="services">
+        <div id="servives_page">
             <NavBar
-                options={{
-                    location: "/contact",
-                    color: "rgb(0, 0, 0)",
-                    background: "rgb(255, 85, 85,0.5)",
-                }}
+                options={{ location: "services", background: "", color: "" }}
             />
-            <h1 className="agraham">Services</h1>
-            <div id="services_list">
-                {services.map((x, idx) => {
-                    return (
-                        // <div className="service">
-                        <div
-                            className="service_tab"
-                            onClick={() => {
-                                service != idx + 1
-                                    ? setService(idx + 1)
-                                    : setService(0);
-                            }}
-                        >
-                            <Image
-                                src={x.icon}
-                                width={100}
-                                height={100}
-                                alt={x.title}
-                            />
-                            <h2>{x.title}</h2>
-                            {/* </div> */}
-                            <div
-                                className={`service_info ${
-                                    service === idx + 1 ? "open" : "close"
-                                }`}
-                            >
-                                {" "}
-                                <p>{x.description}</p>
-                                <ul>
-                                    {x.specific.map((x) => {
-                                        return (
-                                            <li>
-                                                <strong>{x.name}</strong>
-                                                <p>{x.details}</p>
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
-                            </div>
-                        </div>
-                    );
-                })}
+            <div className="vertical_division">
+                <span>
+                    <h1 className="agraham"> Services</h1>
+                    <p>
+                        i offer the following services asdfhgk kyg hadfs h
+                        fkajsdgf kasdhfg kasdjgf fsdkdhg asdfkg asdfkg kkhasdfk
+                        ghadsf
+                    </p>
+                </span>
+
+                <div className="services_page_tab">
+                    {services_data.map((x, idx) => (
+                        <ServiceTab
+                            service={x}
+                            idx={idx}
+                            open={toggleInfo == idx + 1 ? true : false}
+                            toggle={setToggleInfo}
+                            width={toggleInfo == idx + 1 ? "90%" : "40%"}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
