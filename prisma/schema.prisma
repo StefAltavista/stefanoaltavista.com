@@ -17,6 +17,7 @@ model Projects {
   id    Int     @id @default(autoincrement())
   title String
   subtitle String
+  name  String
   url String
   gitHub String
   logo String
@@ -26,5 +27,6 @@ model Projects {
   functionality String
   description String
   technologies String
-  name  String
+  type String
+ 
 }
