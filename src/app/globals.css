@@ -8,11 +8,11 @@
     display: none; /* Safari and Chrome */
 }
 
-/* @font-face {
+@font-face {
     font-family: "Agraham";
-    src: local("Agraham"), url("../fonts/Agraham.ttf") format("truetype");
-    font-weight: bold;
-} */
+    src: url("../fonts/agra.woff2") format("woff2"),
+        url("../fonts/agra.ttf") format("truetype");
+}
 
 .agraham {
     font-family: "Agraham" !important;
