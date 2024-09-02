@@ -6,16 +6,21 @@
     align-items: center;
     color: rgb(151, 255, 255);
 }
-
+.vertical_division {
+    display: flex;
+}
+.vertical_division span {
+    margin-top: 50px;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-right: 5%;
+    border-right: 1px solid white;
+}
 .services_page_tab {
     margin-top: 50px;
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    flex-wrap: wrap;
     flex-direction: column;
 }
-
-.vertical_division {
-    display: flex;
+.services_page_tab div {
+    width: auto;
 }

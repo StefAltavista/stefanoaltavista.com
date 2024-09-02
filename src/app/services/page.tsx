@@ -1,12 +1,38 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import NavBar from "@/components/NavBar";
 import "./services.css";
 import services_data from "../services_data";
 import ServiceTab from "@/components/ServiceTab";
+import { useSearchParams } from "next/navigation";
 
 export default function Services() {
-    const [toggleInfo, setToggleInfo] = useState(0);
+    const selected = useSearchParams();
+
+    const [toggleInfo, setToggleInfo] = useState<number>(
+        Number(selected.get("s")) ?? 0
+    );
+
+    const srv_tab = [
+        useRef<HTMLDivElement>(null),
+        useRef<HTMLDivElement>(null),
+        useRef<HTMLDivElement>(null),
+        useRef<HTMLDivElement>(null),
+        useRef<HTMLDivElement>(null),
+    ];
+
+    useEffect(() => {
+        if (toggleInfo == 0) {
+            window.scrollTo(0, 0);
+        } else if (srv_tab[toggleInfo].current) {
+            setTimeout(() => {
+                srv_tab[toggleInfo].current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }, 1000);
+        }
+    }, [toggleInfo]);
     return (
         <div id="servives_page">
             <NavBar
@@ -24,13 +50,15 @@ export default function Services() {
 
                 <div className="services_page_tab">
                     {services_data.map((x, idx) => (
-                        <ServiceTab
-                            service={x}
-                            idx={idx}
-                            open={toggleInfo == idx + 1 ? true : false}
-                            toggle={setToggleInfo}
-                            width={toggleInfo == idx + 1 ? "90%" : "40%"}
-                        />
+                        <div ref={srv_tab[idx + 1]}>
+                            <ServiceTab
+                                service={x}
+                                idx={idx}
+                                open={toggleInfo == idx + 1 ? true : false}
+                                toggle={setToggleInfo}
+                                width={toggleInfo == idx + 1 ? "90%" : "90%"}
+                            />
+                        </div>
                     ))}
                 </div>
             </div>

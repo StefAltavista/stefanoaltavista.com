@@ -5,9 +5,8 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 10px;
     color: rgb(10, 59, 59);
-    width: 0%;
     transition: 1s;
 }
 
@@ -41,12 +40,12 @@
     display: flex;
     flex-direction: column;
     padding: 0px;
-    max-height: 0px;
     transition: 1s;
     overflow: hidden;
 }
 .close {
-    opacity: 0px;
+    max-height: 0px;
+    opacity: 0;
     transition-delay: 500ms, 0s, 200s;
     transition-property: opacity, max-height, padding;
 }

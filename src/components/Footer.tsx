@@ -2,6 +2,7 @@ import Link from "next/link";
 import "./footer.css";
 import Image from "next/image";
 import { fetchAllProjects } from "@/db/fetchProjects";
+import ContactForm from "./ContactForm";
 export default async function Footer() {
     const projects = await fetchAllProjects();
 
@@ -51,19 +52,22 @@ export default async function Footer() {
                 </Link>
             </div>
             <div id="footer_info" className="footer_section">
-                <p>
-                    Build with: Next.js 14, Node.js, PostgreSQL, Prisma, P5.js
-                    and a lot of Passion for coding!
-                </p>
-                <p>
-                    {" "}
-                    © Copiright 2022 stefanoaltavista.com - All Rights Reserved.
-                </p>
+                {/* <p>Get in touch</p> */}
+                <ContactForm />
             </div>
             <div id="footer_disclaimer" className="footer_section">
                 <p>
                     *This website does not collect any data and does not utilize
-                    any cookie, your privacy is safe in here!
+                    any cookie. Your privacy is safe in here!
+                </p>
+                <p>
+                    Build with: <br></br>Next.js <br></br>Node.js <br></br>
+                    PostgreSQL <br></br>Prisma <br></br>P5.js <br></br>GSAP
+                    <br></br>and a lot of passion for coding!
+                </p>
+                <p>
+                    © Copiright 2022 stefanoaltavista.com<br></br>All Rights
+                    Reserved.
                 </p>
             </div>
         </div>

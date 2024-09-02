@@ -16,6 +16,51 @@
     width: 100%;
 }
 
-#contactForm form div input {
+#contactForm form div input,
+#contactForm form div textarea {
     width: 100%;
+    border: 2px solid rgba(128, 128, 128, 0);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    background-color: rgb(185, 222, 253);
+    color: rgb(7, 0, 45);
+    padding: 5px;
+    height: 30px;
+    transition: 1s;
+}
+#contactForm form div textarea {
+    height: 300px;
+}
+
+#contactForm form div input:focus,
+#contactForm form div textarea:focus {
+    border: 2px solid rgb(86, 224, 255);
+    background-color: rgb(233, 245, 255);
+    outline: none;
+}
+
+.missing {
+    border: 2px solid rgb(255, 86, 86) !important;
+    background-color: rgb(255, 233, 233) !important;
+}
+.error {
+    font-size: 13px;
+    color: rgb(250, 68, 68) !important;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.sending {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(233, 245, 255);
+}
+.loadingWheel {
+    height: 30px;
+    width: 30px;
+    border: 3px solid rgb(233, 245, 255);
+    margin-bottom: 20px;
 }

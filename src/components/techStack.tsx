@@ -1,6 +1,6 @@
 const techLogos = [
     "/images/techLogos/1.svg",
-    "/images/techLogos/2.svg",
+    // "/images/techLogos/2.svg",
     "/images/techLogos/3.svg",
     "/images/techLogos/4.svg",
     "/images/techLogos/5.png",
@@ -27,12 +27,9 @@ const techLogos = [
     "/images/techLogos/26.svg",
 ];
 
-export default function techStack() {
+export default function TechStack() {
     return (
         <div id="technologies">
-            <p className="agraham">
-                My constantly exapnding and evolving technology stack
-            </p>
             <div>
                 {techLogos.map((x, idx) => (
                     <img

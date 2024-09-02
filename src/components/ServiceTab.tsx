@@ -1,10 +1,9 @@
 "use client";
-import { useState } from "react";
 import "./serviceTab.css";
 import Image from "next/image";
 import type { Service } from "@/app/services_data";
 
-export default function Services_component({
+export default function Service_tab({
     service,
     idx,
     open,
@@ -14,14 +13,14 @@ export default function Services_component({
     service: Service;
     idx: number;
     open: boolean;
-    toggle: (x: number) => void;
+    toggle: ((x: number) => void) | null;
     width: string;
 }) {
     return (
         <div
             className="service_tab"
             onClick={() => {
-                toggle(open ? 0 : idx + 1);
+                toggle && toggle(open ? 0 : idx + 1);
             }}
             style={{ width: width }}
         >
@@ -39,9 +38,9 @@ export default function Services_component({
             <div className={`service_info ${open ? "open" : "close"}`}>
                 <p>{service.description}</p>
                 <ul>
-                    {service.specific.map((x) => {
+                    {service.specific.map((x, idx) => {
                         return (
-                            <li>
+                            <li key={idx}>
                                 <strong>{x.name}</strong>
                                 <p>{x.details}</p>
                             </li>

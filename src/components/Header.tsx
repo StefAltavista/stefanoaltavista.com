@@ -14,8 +14,8 @@ export default function Header() {
     const sam = useRef<HTMLInputElement>(null);
 
     useGSAP(() => {
-        gsap.from(nameTitle.current, { opacity: 0, duration: 4, delay: 2 });
-        gsap.from(nameSubTitle.current, { x: "100%", duration: 4, delay: 3 });
+        gsap.from(nameTitle.current, { opacity: 0, duration: 4, delay: 1 });
+        gsap.from(nameSubTitle.current, { x: "100%", duration: 4, delay: 2 });
         gsap.from(nameDescription.current, {
             y: "1000%",
             duration: 3,
