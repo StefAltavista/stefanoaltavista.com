@@ -38,6 +38,8 @@ export default function Background() {
                     top: 0,
                     left: 0,
                     zIndex: -1,
+                    maxWidth: "100vw",
+                    overflow: "hidden",
                 }}
             >
                 {render}

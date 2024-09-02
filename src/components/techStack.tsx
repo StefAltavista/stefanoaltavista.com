@@ -1,6 +1,6 @@
 const techLogos = [
     "/images/techLogos/1.svg",
-    // "/images/techLogos/2.svg",
+    "/images/techLogos/2.svg",
     "/images/techLogos/3.svg",
     "/images/techLogos/4.svg",
     "/images/techLogos/5.png",
@@ -26,7 +26,7 @@ const techLogos = [
     "/images/techLogos/25.png",
     "/images/techLogos/26.svg",
 ];
-
+import "./techStack.css";
 export default function TechStack() {
     return (
         <div id="technologies">

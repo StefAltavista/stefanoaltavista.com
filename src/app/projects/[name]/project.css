@@ -34,12 +34,18 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+.project_details {
+    display: flex;
+    margin-top: 50px;
+}
+.project_details div {
+    margin: 50px;
+}
+
 #projBody {
-    transform: translateX(20px);
-    background-color: rgba(0, 0, 0, 0.611);
+    background-color: rgba(0, 0, 0, 0.3);
     transition: 1s;
     text-align: center;
-    margin-left: 150px;
     padding-left: 20px;
     padding-right: 40px;
     display: flex;
@@ -64,17 +70,18 @@
     flex-direction: column;
     align-items: center;
     font-size: 14px;
+    width: 80%;
 }
-#pDescription {
-    padding-left: 20px;
-
-    text-align: justify;
+.margin {
+    margin-top: 25px;
 }
 #links {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     text-align: left;
+    margin: 0px;
+    margin-top: 30px;
 }
 
 #pImages {

@@ -62,12 +62,11 @@ export default async function Home() {
                 </div>
                 <div className="home_section">
                     <p className="agraham">
-                        With an evergreen technology stack
+                        With a constant expanding technology stack
                     </p>
                     <TechStack />
                 </div>
                 <div className="home_section">
-                    <h2 className="agraham">Some of my works</h2>
                     <ProjectsPreview projects={projects} />
                 </div>
                 <div className="home_section home_about">
@@ -76,11 +75,6 @@ export default async function Home() {
                             <TW_contact />
                         </div>
                     </div>
-                </div>
-                <div className="home_section">
-                    <h3 className="agraham">Just drop me a message</h3>
-                    <ContactForm />
-                    <div className="vertical_spacer"></div>
                 </div>
             </div>
         </div>

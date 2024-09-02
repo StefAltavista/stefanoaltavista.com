@@ -92,7 +92,7 @@ export default function ProjectsPreview({
         <>
             <div id="projectsPreview" ref={homeProjectScope}>
                 <div className="home_project_section">
-                    <p className="agraham">Latest works</p>
+                    <p className="agraham">Latest Projects</p>
                     <div className="home_projects trigger_1">
                         {latestProj.map((x, idx) => (
                             <div

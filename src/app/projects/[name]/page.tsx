@@ -1,6 +1,7 @@
 import { fetchSingleProject } from "@/db/fetchProjects";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import "./project.css";
 
@@ -34,35 +35,48 @@ export default async function Project({ params }: projectPageParams) {
                             : { color: project.background }
                     }
                 >
-                    <a href={project.url} target="blank">
-                        <p id="pTitle">{project.title}</p>
-                    </a>
-                    <p id="pSub">{project.subtitle}</p>
+                    <div className="project_details">
+                        <div>
+                            <Image
+                                src={project.logo}
+                                alt={project.title}
+                                width={300}
+                                height={300}
+                            />
+                        </div>
+                        <div>
+                            <p id="pTitle">{project.title}</p>
+                            <p id="pSub">{project.subtitle}</p>
+                            <p className="margin">
+                                {newline(project.technologies)}
+                            </p>
+
+                            <div id="links">
+                                {project.name != "mobileapps" && (
+                                    <a
+                                        href={project.url}
+                                        id="pLinkTo"
+                                        target="_blank"
+                                    >
+                                        Visit Website
+                                    </a>
+                                )}
+
+                                <a
+                                    href={project.gitHub}
+                                    id="pLinkTo"
+                                    target="_blank"
+                                >
+                                    Visit GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div id="pInfo">
-                        <a href={project.url} target="blank">
-                            <img src={project.logo} id="pTop" />
-                        </a>
+                        <div id="dev">{newline(project.functionality)}</div>{" "}
                         <div id="pDescription">
                             {newline(project.description)}
                         </div>
-                        <div id="tech">{newline(project.technologies)}</div>
-                        <div id="dev">
-                            {newline(project.functionality)}
-                        </div>{" "}
-                    </div>
-                    <div id="links">
-                        {project.name != "about" &&
-                        project.name != "mobileapps" ? (
-                            <a href={project.url} id="pLinkTo" target="_blank">
-                                Visit Website
-                            </a>
-                        ) : null}
-                        {project.name == "about" && (
-                            <Link href="/contact">Request CV</Link>
-                        )}
-                        <a href={project.gitHub} id="pLinkTo" target="_blank">
-                            Visit GitHub
-                        </a>
                     </div>
 
                     <div id="pImages">

@@ -43,6 +43,9 @@
     border: 2px solid rgb(255, 86, 86) !important;
     background-color: rgb(255, 233, 233) !important;
 }
+.missing p {
+    color: rgb(0, 0, 0) !important;
+}
 .error {
     font-size: 13px;
     color: rgb(250, 68, 68) !important;
@@ -51,7 +54,6 @@
 }
 
 .sending {
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,4 +65,16 @@
     width: 30px;
     border: 3px solid rgb(233, 245, 255);
     margin-bottom: 20px;
+}
+
+.policy_consent {
+    display: flex;
+    font-size: 12px;
+    align-items: flex-start;
+    margin-top: 5px;
+}
+.policy_consent input {
+    width: 10px !important;
+    margin: 0px;
+    margin-right: 10px;
 }

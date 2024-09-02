@@ -1,8 +1,38 @@
-#about {
-    width: 100vw;
+#about_page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: rgb(151, 255, 255);
+}
+#about {
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+}
+.about_section h1 {
+    margin-right: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+.about_section {
+    background-color: rgba(0, 0, 0, 0.363);
+    padding-left: 5%;
+    margin-top: 20px;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_description p {
+    line-height: 35px;
+    white-space: 10px;
+    display: inline;
+    font-size: 17px;
+    text-align: justify;
+}
+.about_description .agraham {
+    font-size: 19px;
+    color: rgb(218, 255, 243);
 }

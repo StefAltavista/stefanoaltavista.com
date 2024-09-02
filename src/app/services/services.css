@@ -9,12 +9,16 @@
 .vertical_division {
     display: flex;
 }
-.vertical_division span {
+.vertical_division aside {
+    width: 70%;
     margin-top: 50px;
-    margin-right: 5%;
+    margin-right: 30px;
     margin-left: 5%;
-    padding-right: 5%;
+    padding-right: 30px;
     border-right: 1px solid white;
+}
+aside p {
+    text-align: left !important;
 }
 .services_page_tab {
     margin-top: 50px;

@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react";
 export default function ContactForm() {
     const [object, setObject] = useState("");
     const [content, setContent] = useState("");
+    const [consent, setConsent] = useState(false);
     const [email, setEmail] = useState("");
     const [check, setCheck] = useState(false);
     const [error, setError] = useState("");
@@ -17,18 +18,25 @@ export default function ContactForm() {
 
     const send = async () => {
         setCheck(true);
+
         setError("");
         if (!email || !content || !object) {
             setError("Please complete the form");
             return;
         }
+        if (!consent) {
+            setError("Please accept the terms of use");
+            return;
+        }
         setSending(true);
-
         setTimeout(() => {}, 1000);
         const result = await sendMessage(email, object, content);
         setResponse(result);
         setSending(false);
         setSent(true);
+    };
+    const handleCheckbox = () => {
+        setConsent(!consent);
     };
 
     useGSAP(() => {
@@ -79,7 +87,6 @@ export default function ContactForm() {
                                 }
                             ></textarea>
                         </div>
-
                         <button
                             type="submit"
                             onClick={(e) => {
@@ -89,6 +96,22 @@ export default function ContactForm() {
                         >
                             Send
                         </button>
+                        <div
+                            className={`policy_consent ${
+                                check && consent != true ? "missing" : ""
+                            }`}
+                        >
+                            <input
+                                className={` ${
+                                    check && consent != true ? "missing" : ""
+                                }`}
+                                type="checkbox"
+                                name="consent"
+                                checked={consent}
+                                onChange={handleCheckbox}
+                            ></input>
+                            <p> I agree to the terms of use</p>
+                        </div>
                         {error && <p className="error">{error}</p>}
                     </div>
                 )}

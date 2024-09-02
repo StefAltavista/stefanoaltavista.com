@@ -2,9 +2,10 @@
     background-color: rgba(134, 225, 250, 0.571);
     padding: 20px;
     width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    mix-blend-mode: luminosity;
+    display: flex;
+    margin: 0;
+    justify-content: space-around;
+    /* mix-blend-mode: luminosity; */
     z-index: 2;
 }
 
@@ -12,14 +13,15 @@
 a {
     margin-top: 0;
     margin-bottom: 20px;
-    color: rgb(191, 224, 253);
+    color: rgb(214, 236, 255);
 }
-
+.footer_section:nth-child(2) {
+    border-left: 1px solid rgba(191, 224, 253, 0.743);
+    padding: 20px;
+}
 .footer_section {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid white;
-    padding: 20px;
     margin: 20px;
     justify-content: flex-start;
     align-items: baseline;
@@ -50,5 +52,4 @@ a {
 .socialMediaLink img {
     width: 30px;
     height: 30px;
-    /* filter: saturate(0); */
 }

@@ -39,14 +39,14 @@ export default function Services() {
                 options={{ location: "services", background: "", color: "" }}
             />
             <div className="vertical_division">
-                <span>
+                <aside>
                     <h1 className="agraham"> Services</h1>
                     <p>
-                        i offer the following services asdfhgk kyg hadfs h
-                        fkajsdgf kasdhfg kasdjgf fsdkdhg asdfkg asdfkg kkhasdfk
-                        ghadsf
+                        Whether you're seeking expert guidance, personalized
+                        solutions, or professional support, discover how we can
+                        help you achieve your goals.
                     </p>
-                </span>
+                </aside>
 
                 <div className="services_page_tab">
                     {services_data.map((x, idx) => (

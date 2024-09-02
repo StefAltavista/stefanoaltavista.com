@@ -50,25 +50,43 @@ export default async function Footer() {
                         <p>E-Mail</p>
                     </div>
                 </Link>
+                <div id="footer_disclaimer" className="footer_section">
+                    <p
+                        style={{
+                            fontSize: "12px",
+                        }}
+                    >
+                        *This website does not use cookies, web beacons, or
+                        other tracking technologies. <br></br>
+                        <br></br>Built with: Next.js - Node.js - PostgreSQL -
+                        Prisma - P5.js- GSAP
+                        <br></br>
+                        and a lot of passion for coding!
+                    </p>
+                    <Link href="/privacy" target="blank">
+                        <p
+                            style={{
+                                fontSize: "12px",
+                                textDecoration: "underline",
+                            }}
+                        >
+                            View Privacy Policy
+                        </p>
+                    </Link>
+
+                    <p
+                        style={{
+                            fontSize: "12px",
+                        }}
+                    >
+                        © Copiright 2022 stefanoaltavista.com <br></br>All
+                        Rights Reserved.
+                    </p>
+                </div>
             </div>
             <div id="footer_info" className="footer_section">
-                {/* <p>Get in touch</p> */}
+                <p>Get in touch</p>
                 <ContactForm />
-            </div>
-            <div id="footer_disclaimer" className="footer_section">
-                <p>
-                    *This website does not collect any data and does not utilize
-                    any cookie. Your privacy is safe in here!
-                </p>
-                <p>
-                    Build with: <br></br>Next.js <br></br>Node.js <br></br>
-                    PostgreSQL <br></br>Prisma <br></br>P5.js <br></br>GSAP
-                    <br></br>and a lot of passion for coding!
-                </p>
-                <p>
-                    © Copiright 2022 stefanoaltavista.com<br></br>All Rights
-                    Reserved.
-                </p>
             </div>
         </div>
     );

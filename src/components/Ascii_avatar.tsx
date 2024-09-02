@@ -1,17 +1,26 @@
-export default function Acii_avatar() {
+"use client";
+import { useState } from "react";
+import "./ascii_avatar.css";
+
+export default function Acii_avatar({ control = true }: { control: boolean }) {
+    const [scale, setScale] = useState(0.8);
+
+    const scaleAvatar = (x: string) => {
+        let value = Number(x);
+        setScale(value);
+    };
     return (
-        <pre
-            className="avatar"
-            style={{
-                fontSize: "4px",
-                fontWeight: 100,
-                lineHeight: "5px",
-                letterSpacing: "2px",
-                marginRight: "-100px",
-                // mixBlendMode: "color-dodge",
-                // color: "green",
-            }}
-        >{`
+        <div id="ascii_avatar">
+            <pre
+                style={{
+                    fontSize: "4px",
+                    fontWeight: 100,
+                    lineHeight: "5px",
+                    letterSpacing: "2px",
+                    marginRight: "-100px",
+                    transform: `scale(${scale},${scale})`,
+                }}
+            >{`
                                         Xêg       qœœŽŽÀ                    âéÚð  
                                      ŽŽŽERgÐ     êÐŽgKHHXé                 mÔâÔé 
                                Ðqqœ   ŽœXXŽ        gXR€ßRÐß    ðÜé        pp€pG         G   
@@ -104,5 +113,17 @@ export default function Acii_avatar() {
                                     ’ˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ¸ˆˆˆˆˆˆˆˆ¸¸¸˜                  
                                          ¸˜¸ˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ¸ˆˆˆˆ   ˆˆˆˆˆˆˆ¨              
                                               ˆ¸¸ˆˆˆˆˆˆˆˆ¸ˆˆˆˆˆˆˆˆˆˆ ˆˆˆ˜…                             `}</pre>
+            {control && (
+                <input
+                    type="range"
+                    onChange={({ target }) => scaleAvatar(target.value)}
+                    step={0.01}
+                    min={0.5}
+                    max={5}
+                    value={scale}
+                    style={{ zIndex: 1 }}
+                ></input>
+            )}
+        </div>
     );
 }

@@ -32,9 +32,9 @@ export function TW_intro() {
             .pauseFor(200)
             .typeString(`I'm <p class="agraham">Stefano Altavista Mascitti</p>`)
             .pauseFor(800)
-            .typeString(" a Web Developer based in Berlin (DE).")
-            .pauseFor(800)
-            .typeString(`<br/><br/> Welcome to my website!`);
+            .typeString(" a Web Developer based in Berlin (DE).");
+        // .pauseFor(800)
+        // .typeString(`<br/><br/> Welcome to my website!`);
         // .typeString(`    <br/> Here, you can explore a curated selection of my <p class="agraham">projects</p>.`);
 
         window.addEventListener("scroll", scrollLeft);
