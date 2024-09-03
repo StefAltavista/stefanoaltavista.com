@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 import "./navBar.css";
 
@@ -13,10 +14,9 @@ type NavBarOptions = {
 export default function NavBar({ options }: { options: NavBarOptions }) {
     const bg = options.background;
     const co = options.color;
-
     const { location } = options;
     const navBarScroll = useRef<HTMLInputElement>(null);
-
+    const { width } = useWindowSize();
     const scrollLeft = () => {
         const scrl = window.scrollY;
         if (navBarScroll.current) {
@@ -46,20 +46,27 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
         >
             {location === "/" ? (
                 <div className="navBar_title">
-                    <p
-                        className="agraham mix_blend"
-                        onClick={() => {
-                            window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                    >
-                        Stefano<br></br>Altavista<br></br>Mascitti<br></br>
-                    </p>
+                    <a>
+                        <p
+                            className="agraham mix_blend"
+                            onClick={() => {
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                            }}
+                        >
+                            {" "}
+                            {width && width > 700
+                                ? `Stefano Altavista Mascitti`
+                                : "S.A.M."}
+                        </p>
+                    </a>
                 </div>
             ) : (
                 <div className="navBar_title">
                     <Link href="/">
                         <p className="agraham " style={{ color: co }}>
-                            Stefano Altavista Mascitti
+                            {width && width > 700
+                                ? `Stefano Altavista Mascitti`
+                                : "S.A.M."}
                         </p>
                     </Link>
                 </div>

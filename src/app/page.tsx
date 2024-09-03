@@ -6,10 +6,9 @@ import NavBar from "@/components/NavBar";
 import Header from "@/components/Header";
 import ProjectsPreview from "@/components/ProjectsPreview";
 import { fetchAllProjects } from "@/db/fetchProjects";
-import ContactForm from "@/components/ContactForm";
 import services_data from "./services_data";
 import Link from "next/link";
-import TechStack from "@/components/techStack";
+import TechStack from "@/components/TechStack";
 
 export default async function Home() {
     const projects = await fetchAllProjects();
@@ -35,7 +34,7 @@ export default async function Home() {
                         <div id="typeWriterText_intro" className="typewriter">
                             <TW_intro />
                         </div>
-                        <Acii_avatar />
+                        <Acii_avatar control={true} />
                     </div>
                 </div>
 
@@ -61,9 +60,9 @@ export default async function Home() {
                     </div>
                 </div>
                 <div className="home_section">
-                    <p className="agraham">
+                    <h4 className="agraham">
                         With a constant expanding technology stack
-                    </p>
+                    </h4>
                     <TechStack />
                 </div>
                 <div className="home_section">

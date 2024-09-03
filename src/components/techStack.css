@@ -10,7 +10,6 @@
 }
 #technologies p {
     color: rgb(141, 238, 255);
-    margin-left: 70px;
 }
 
 #technologies div {
@@ -18,13 +17,16 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 30px;
-    width: 60vw;
+    width: 80vw;
 }
 #technologies div img {
     padding: 7px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
     width: 80px;
-    margin: 20px;
+    margin: 10px;
     object-fit: contain;
+}
+
+@media only screen and (max-width: 700px) {
 }

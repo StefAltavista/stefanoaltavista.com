@@ -27,5 +27,19 @@
 #sam p {
     font-size: 20px;
     margin-left: 50px;
+    max-width: 80vw;
     margin-top: 0;
+}
+@media only screen and (max-width: 700px) {
+    #sam h3 {
+        font-size: 50px;
+    }
+    #sam p {
+        font-size: 15px;
+        max-width: 70vw;
+        margin-top: 20px;
+    }
+    #sam p:nth-child(1) {
+        margin-top: 50px;
+    }
 }

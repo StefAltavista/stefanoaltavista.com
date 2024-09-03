@@ -1,7 +1,7 @@
 #projectCard {
     margin: 35px;
     position: relative;
-    width: 250px;
+    width: 300px;
     padding: 20px;
     height: 550px;
     display: flex;
@@ -27,4 +27,13 @@
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 100);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 700) {
+    #projLogo {
+        width: 130px;
+    }
+    #projectCard {
+        max-width: 200px !important;
+    }
 }

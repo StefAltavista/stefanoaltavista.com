@@ -1,6 +1,5 @@
 .typewriter {
     font-family: "Courier New" !important;
-    width: 60vw;
     padding: 40px;
     text-align: justify;
     transition: max-height 1s ease-in-out;
@@ -8,4 +7,10 @@
 
 .typewriter p {
     display: inline;
+}
+@media only screen and (max-width: 700) {
+    .typewriter {
+        width: 100%;
+        padding: 20px;
+    }
 }
