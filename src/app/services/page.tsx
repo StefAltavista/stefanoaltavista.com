@@ -39,13 +39,15 @@ export default function Services() {
                 options={{ location: "services", background: "", color: "" }}
             />
             <div className="vertical_division">
-                <aside>
+                <aside className="services_aside">
                     <h1 className="agraham"> Services</h1>
-                    <p>
-                        Whether you're seeking expert guidance, personalized
-                        solutions, or professional support, discover how we can
-                        help you achieve your goals.
-                    </p>
+                    <div className="small_courier">
+                        <p>Personalized solutions </p>
+
+                        <p>Professional support</p>
+
+                        <p>Project realization</p>
+                    </div>
                 </aside>
 
                 <div className="services_page_tab">

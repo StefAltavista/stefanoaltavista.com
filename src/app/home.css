@@ -57,11 +57,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-self: center;
+    justify-self: space-between;
     margin: 20px;
     color: rgb(10, 59, 59);
     width: 200px;
     height: 200px;
+}
+.home_service_div img {
+    width: 100px;
+    margin: 0;
 }
 
 .home_service_div h2 {
@@ -99,8 +103,7 @@
     .home_service_div h2 {
         font-size: 13px;
     }
-    .home_service_div a,
-    img {
+    .home_service_div img {
         width: 80px;
         margin: 0;
     }

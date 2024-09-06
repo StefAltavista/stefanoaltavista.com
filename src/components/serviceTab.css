@@ -12,12 +12,13 @@
 
 .service_tab div {
     display: flex;
+
     justify-content: flex-start;
     align-items: center;
 }
 
 .service_tab div h2 {
-    white-space: nowrap;
+    font-size: 15px;
 }
 
 .service_tab div div {

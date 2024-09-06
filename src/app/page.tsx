@@ -35,6 +35,7 @@ export default async function Home() {
                             <TW_intro />
                         </div>
                         <Acii_avatar control={true} />
+                        <p className="small_courier">Welcome to my Website!</p>
                     </div>
                 </div>
 
@@ -44,18 +45,18 @@ export default async function Home() {
                     </h2>
                     <div className="home_services">
                         {services_data.map((x, idx) => (
-                            <div className="home_service_div" key={idx}>
-                                <Link href={`/services?s=${idx + 1}`}>
+                            <Link href={`/services?s=${idx + 1}`}>
+                                <div className="home_service_div" key={idx}>
                                     <Image
                                         src={x.icon}
                                         width={100}
                                         height={100}
                                         alt={x.title}
                                         className="service_icon"
-                                    />{" "}
-                                </Link>
-                                <h2>{x.title}</h2>
-                            </div>
+                                    />
+                                    <h2>{x.title}</h2>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
