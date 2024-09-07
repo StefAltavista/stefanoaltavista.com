@@ -1,12 +1,12 @@
 #projectCard {
-    margin: 35px;
+    margin: 30px;
     position: relative;
-    width: 300px;
+    width: 250px;
     padding: 20px;
     height: 550px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     align-items: center;
     cursor: pointer;
@@ -19,21 +19,59 @@
 #projectCard p {
     text-align: center !important;
 }
+#head {
+    display: flex;
+    flex-direction: column;
+}
+#head h3 {
+    font-size: 30px;
+    height: 40px;
+}
+#head p {
+    font-size: 15px;
+}
 #projLogo {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: 30px;
     border: 1px solid white;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 100);
     cursor: pointer;
+    align-self: center !important;
 }
 
-@media only screen and (max-width: 700) {
+@media only screen and (max-width: 1000px) {
     #projLogo {
-        width: 130px;
+        width: 120px !important;
+        height: 120px !important;
     }
     #projectCard {
         max-width: 200px !important;
+        height: 400px;
+        margin: 20px;
+    }
+    #projectCard p {
+        font-size: 13px;
+    }
+    #head h3 {
+        font-size: 25px !important;
+    }
+}
+@media only screen and (max-width: 550px) {
+    #projLogo {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    #projectCard {
+        max-width: 190px !important;
+        height: 350px;
+        margin: 15px;
+    }
+    #projectCard p {
+        font-size: 12px;
+    }
+    #head h3 {
+        font-size: 20px !important;
     }
 }

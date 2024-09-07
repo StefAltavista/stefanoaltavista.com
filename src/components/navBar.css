@@ -77,26 +77,40 @@ p {
         backdrop-filter: blur(10px) saturate(20%) brightness(60%);
     }
 
-    .navBarScroll div {
+    #navBar div {
         display: flex;
     }
-    .navBarScroll div a {
+    #navBar div a {
         height: 50px;
         display: flex;
         align-items: center;
         padding: 0px;
     }
 
-    .navBarScroll .navBar_links p {
+    #navBar .navBar_links p {
         margin-top: 0px;
-        margin-right: 20px;
+        margin-left: 20px;
     }
-    .navBar_title p {
+
+    .navBarScroll .navBar_title p {
         border: none;
+        margin-left: 20px;
+    }
+    .navBarFixed .navBar_title p {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
     }
     .navBar_title a {
         margin: 0px;
         margin-left: 10px;
         margin-top: 5px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #navBar .navBar_links p {
+        font-size: 13px;
     }
 }

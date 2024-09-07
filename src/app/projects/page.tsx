@@ -14,7 +14,14 @@ export default async function Projects() {
 
             <div id="projects_body">
                 <div className="projects_board">
-                    <h1 className="agraham">Projects</h1>
+                    <div className="projects_header">
+                        <h3 className="agraham">Projects</h3>
+                        <p>
+                            Here you can find some selected projects of mine,
+                            developed for companies, clients or personal
+                            endevours.
+                        </p>
+                    </div>
 
                     {projects?.map((x) => (
                         <ProjectCard project={x} />

@@ -1,11 +1,12 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import "./footer.css";
 import Image from "next/image";
-import { fetchAllProjects } from "@/db/fetchProjects";
 import ContactForm from "./ContactForm";
 export default async function Footer() {
-    const projects = await fetchAllProjects();
-
+    const pathName = usePathname();
     const socialMediaLogos = [
         "/images/socialMediaLogos/1.svg",
         "/images/socialMediaLogos/2.svg",
@@ -14,42 +15,49 @@ export default async function Footer() {
     return (
         <div id="footer">
             <div id="footer_contact" className="footer_section">
-                <Link
-                    href={`http://linkedin.com/in/stefano-altavista/`}
-                    target="blank"
-                >
-                    <div className="socialMediaLink">
-                        <Image
-                            src={socialMediaLogos[0]}
-                            width={80}
-                            height={80}
-                            alt="S.A.M. social media logo"
-                        />
-                        <p>LinkedIn</p>
-                    </div>
-                </Link>
-                <Link href={`http://github.com/stefAltavista`}>
-                    <div className="socialMediaLink">
-                        <Image
-                            src={socialMediaLogos[1]}
-                            width={80}
-                            height={80}
-                            alt="S.A.M. social media logo"
-                        />
-                        <p>GitHub</p>
-                    </div>
-                </Link>{" "}
-                <Link href={`mailto:altavista.stef@gmail.com`} target="blank">
-                    <div className="socialMediaLink">
-                        <Image
-                            src={socialMediaLogos[2]}
-                            width={80}
-                            height={80}
-                            alt="S.A.M. social media logo"
-                        />
-                        <p>E-Mail</p>
-                    </div>
-                </Link>
+                {pathName != "/contact" && (
+                    <>
+                        <Link
+                            href={`http://linkedin.com/in/stefano-altavista/`}
+                            target="blank"
+                        >
+                            <div className="socialMediaLink">
+                                <Image
+                                    src={socialMediaLogos[0]}
+                                    width={80}
+                                    height={80}
+                                    alt="S.A.M. social media logo"
+                                />
+                                <p>LinkedIn</p>
+                            </div>
+                        </Link>
+                        <Link href={`http://github.com/stefAltavista`}>
+                            <div className="socialMediaLink">
+                                <Image
+                                    src={socialMediaLogos[1]}
+                                    width={80}
+                                    height={80}
+                                    alt="S.A.M. social media logo"
+                                />
+                                <p>GitHub</p>
+                            </div>
+                        </Link>{" "}
+                        <Link
+                            href={`mailto:altavista.stef@gmail.com`}
+                            target="blank"
+                        >
+                            <div className="socialMediaLink">
+                                <Image
+                                    src={socialMediaLogos[2]}
+                                    width={80}
+                                    height={80}
+                                    alt="S.A.M. social media logo"
+                                />
+                                <p>E-Mail</p>
+                            </div>
+                        </Link>
+                    </>
+                )}
                 <div id="footer_disclaimer" className="footer_section">
                     <p
                         style={{
@@ -84,10 +92,12 @@ export default async function Footer() {
                     </p>
                 </div>
             </div>
-            <div id="footer_info" className="footer_section">
-                <p>Get in touch</p>
-                <ContactForm />
-            </div>
+            {pathName != "/contact" && (
+                <div id="footer_info" className="footer_section">
+                    <p>Get in touch</p>
+                    <ContactForm />
+                </div>
+            )}
         </div>
     );
 }

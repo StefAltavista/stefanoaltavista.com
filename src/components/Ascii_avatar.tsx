@@ -2,8 +2,14 @@
 import { useState } from "react";
 import "./ascii_avatar.css";
 
-export default function Acii_avatar({ control = true }: { control: boolean }) {
-    const [scale, setScale] = useState(0.8);
+export default function Acii_avatar({
+    control = true,
+    size,
+}: {
+    control: boolean;
+    size: number;
+}) {
+    const [scale, setScale] = useState(size);
 
     const scaleAvatar = (x: string) => {
         let value = Number(x);
@@ -14,7 +20,7 @@ export default function Acii_avatar({ control = true }: { control: boolean }) {
             <pre
                 style={{
                     fontSize: "4px",
-                    fontWeight: 100,
+                    // fontWeight: 100,
                     lineHeight: "5px",
                     letterSpacing: "2px",
                     marginRight: "-100px",

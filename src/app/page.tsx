@@ -34,7 +34,7 @@ export default async function Home() {
                         <div id="typeWriterText_intro" className="typewriter">
                             <TW_intro />
                         </div>
-                        <Acii_avatar control={true} />
+                        <Acii_avatar control={true} size={0.8} />
                         <p className="small_courier">Welcome to my Website!</p>
                     </div>
                 </div>

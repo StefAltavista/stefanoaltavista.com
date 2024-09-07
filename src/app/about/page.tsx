@@ -15,13 +15,15 @@ export default function about() {
             />
             <div id="about">
                 <div className="about_section">
-                    <Acii_avatar control={false} />
+                    <Acii_avatar control={false} size={0.5} />
                 </div>
                 <div className="about_section">
                     <div className=" agraham">
-                        <h1> . S . A . M . </h1>
+                        <h1> S . A . M </h1>
                     </div>
-                    <div className=" about_description">
+                </div>
+                <div className="about_section">
+                    <div className="small_courier about_description">
                         <p>
                             With a background in Electronics and Information
                             Technology Stefano Altavista Mascitti is a

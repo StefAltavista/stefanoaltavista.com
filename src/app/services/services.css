@@ -35,15 +35,23 @@
     .services_aside {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: start;
+        justify-content: space-between;
         border-right: none;
         border-bottom: 1px solid white;
         margin-left: 0;
         padding-bottom: 20px;
         width: 90%;
+        margin-top: 0px;
+        margin-right: 0px;
+        padding-right: 0px;
     }
     .services_aside p {
         font-size: 15px;
-        text-align: left !important;
+        text-align: center !important;
+    }
+    .services_page_tab div {
+        display: flex;
+        justify-content: center;
     }
 }

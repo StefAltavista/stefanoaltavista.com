@@ -4,7 +4,7 @@
     width: 100vw;
     display: flex;
     margin: 0;
-    margin-top: 20vw;
+    /* margin-top: 20vw; */
     justify-content: space-around;
     /* mix-blend-mode: luminosity; */
     z-index: 2;
@@ -66,5 +66,17 @@ a {
     .footer_section {
         margin: 0px;
         align-items: center;
+    }
+    .socialMediaLink {
+        flex-direction: column;
+        margin: 10px;
+    }
+    .socialMediaLink p {
+        padding-left: 0px;
+    }
+    #footer_contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

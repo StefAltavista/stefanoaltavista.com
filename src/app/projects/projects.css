@@ -5,10 +5,16 @@
     width: 100vw;
 }
 #projects_body {
-    width: 80vw;
+    width: 100vw;
 }
-#projects_body h1 {
+.projects_header {
     width: 100%;
+    padding: 50px;
+    text-align: right;
+}
+.projects_header p {
+    text-align: right;
+    color: aqua;
 }
 
 .projects_board {
@@ -17,4 +23,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.projects_board a {
+    margin: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    #projects_body h2 {
+        padding-left: 30px;
+    }
 }

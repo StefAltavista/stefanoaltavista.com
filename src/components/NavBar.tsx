@@ -53,8 +53,7 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
                                 window.scrollTo({ top: 0, behavior: "smooth" });
                             }}
                         >
-                            {" "}
-                            {width && width > 700
+                            {width && width > 800
                                 ? `Stefano Altavista Mascitti`
                                 : "S.A.M."}
                         </p>
