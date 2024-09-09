@@ -5,8 +5,10 @@ import Link from "next/link";
 import "./footer.css";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
-export default async function Footer() {
+
+export default function Footer() {
     const pathName = usePathname();
+
     const socialMediaLogos = [
         "/images/socialMediaLogos/1.svg",
         "/images/socialMediaLogos/2.svg",

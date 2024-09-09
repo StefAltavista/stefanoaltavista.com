@@ -90,7 +90,7 @@
 }
 
 .projectCard_homePreview {
-    background-color: rgba(145, 145, 145, 0.519);
+    background-color: rgba(0, 0, 0, 0.5);
     padding-left: 10vw;
     padding-right: 10vw;
     padding-top: 10vh;
@@ -101,7 +101,9 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+
     z-index: 3;
 }
 
@@ -116,6 +118,8 @@
 
 .projectPreview_description {
     width: 300px;
+
+    margin-left: 100px !important;
     padding: 20px;
     height: 550px;
     border-radius: 10px;
@@ -134,10 +138,13 @@
     }
     .projectPreview_description {
         width: 200px;
+        height: 400px;
         font-size: 12px !important;
         margin: auto auto;
     }
 }
 
 @media only screen and (max-width: 400px) {
+}
+.projectPreview_description {
 }

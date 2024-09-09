@@ -45,7 +45,7 @@
     overflow: hidden;
 }
 .close {
-    max-height: 0px;
+    max-height: 0px !important;
     opacity: 0;
     transition-delay: 500ms, 0s, 200s;
     transition-property: opacity, max-height, padding;

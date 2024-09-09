@@ -16,7 +16,7 @@ export default function ContactForm() {
     const [sending, setSending] = useState(false);
     const [sent, setSent] = useState(false);
 
-    const send = async () => {
+    const handleSubmit = async () => {
         setCheck(true);
 
         setError("");
@@ -87,13 +87,7 @@ export default function ContactForm() {
                                 }
                             ></textarea>
                         </div>
-                        <button
-                            type="submit"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                send();
-                            }}
-                        >
+                        <button type="submit" onSubmit={handleSubmit}>
                             Send
                         </button>
                         <div

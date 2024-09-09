@@ -43,6 +43,7 @@
 .navBarFixed .navBar_title a,
 p {
     margin: 0;
+    margin-top: 5px;
     display: flex;
     align-items: start;
 }

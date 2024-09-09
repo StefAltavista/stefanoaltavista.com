@@ -6,6 +6,7 @@ import "./projects.css";
 
 export default async function Projects() {
     const projects = await fetchAllProjects();
+    projects ? ([projects[2], projects[3]] = [projects[3], projects[2]]) : null;
     return (
         <div id="projects">
             <NavBar
@@ -15,11 +16,10 @@ export default async function Projects() {
             <div id="projects_body">
                 <div className="projects_board">
                     <div className="projects_header">
-                        <h3 className="agraham">Projects</h3>
-                        <p>
-                            Here you can find some selected projects of mine,
-                            developed for companies, clients or personal
-                            endevours.
+                        <h2 className="agraham">Projects</h2>
+                        <p className="small_courier">
+                            Selection of projects developed for companies or
+                            clients and personal endeavors
                         </p>
                     </div>
 

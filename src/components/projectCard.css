@@ -18,6 +18,7 @@
 
 #projectCard p {
     text-align: center !important;
+    letter-spacing: 2px;
 }
 #head {
     display: flex;
@@ -52,12 +53,14 @@
         margin: 20px;
     }
     #projectCard p {
-        font-size: 13px;
+        font-size: 15px;
     }
     #head h3 {
         font-size: 25px !important;
+        height: 35px;
     }
 }
+/* 
 @media only screen and (max-width: 550px) {
     #projLogo {
         width: 100px !important;
@@ -69,9 +72,28 @@
         margin: 15px;
     }
     #projectCard p {
-        font-size: 12px;
+        font-size: 14px;
     }
     #head h3 {
         font-size: 20px !important;
+        height: 30px;
     }
 }
+@media only screen and (max-width: 450px) {
+    #projLogo {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    #projectCard {
+        max-width: 160px !important;
+        height: 300px;
+        margin: 10px;
+    }
+    #projectCard p {
+        font-size: 12px;
+    }
+    #head h3 {
+        font-size: 18px !important;
+        height: 10px;
+    }
+} */

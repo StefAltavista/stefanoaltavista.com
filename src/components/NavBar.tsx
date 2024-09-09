@@ -55,7 +55,7 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
                         >
                             {width && width > 800
                                 ? `Stefano Altavista Mascitti`
-                                : "S.A.M."}
+                                : "S A M "}
                         </p>
                     </a>
                 </div>
@@ -63,9 +63,9 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
                 <div className="navBar_title">
                     <Link href="/">
                         <p className="agraham " style={{ color: co }}>
-                            {width && width > 700
+                            {width && width > 800
                                 ? `Stefano Altavista Mascitti`
-                                : "S.A.M."}
+                                : "SAM"}
                         </p>
                     </Link>
                 </div>

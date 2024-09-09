@@ -23,9 +23,9 @@ export default function Contact() {
                     <p className="small_courier">
                         Whether you're looking to collaborate on an exciting
                         project, need assistance with a web development task, or
-                        want to explore new opportunities,
+                        want to explore new opportunities:
                     </p>
-                    <br></br>
+
                     <p className="agraham">I would love to hear from you. </p>
                     <br></br>
                     <p className="small_courier">
@@ -38,7 +38,7 @@ export default function Contact() {
                     <p className="agraham">Let's develop.</p>
                 </div>
                 <div className="contact_form">
-                    <h1 className="agraham">Contact</h1>
+                    <h2 className="agraham">Contact</h2>
 
                     <ContactForm />
                     <div className="social_links">

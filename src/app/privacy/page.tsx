@@ -1,3 +1,4 @@
+import "./privacy.css";
 export default function Privacy() {
     return (
         <div id="privacy">

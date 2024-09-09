@@ -1,10 +1,14 @@
+"use client";
 import Link from "next/link";
 import { type Projects as Project } from "@prisma/client";
 import "./projectCard.css";
 
 export default function ProjectCard({ project }: { project: Project }) {
     return (
-        <Link href={`./projects/${project.name}`}>
+        <Link
+            href={`./projects/${project.name}`}
+            onClick={(e) => e.stopPropagation()}
+        >
             <div
                 id="projectCard"
                 style={{

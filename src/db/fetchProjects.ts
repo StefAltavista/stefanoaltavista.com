@@ -3,7 +3,7 @@ import prisma from "./client";
 export async function fetchAllProjects() {
     let projects;
     try {
-        projects = await prisma.projects.findMany();
+        projects = await prisma.projects.findMany({ orderBy: [{ id: "asc" }] });
     } catch (error) {
         console.error("Error fetching projects:", error);
     }

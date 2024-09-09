@@ -52,13 +52,13 @@ export default function Services() {
 
                 <div className="services_page_tab">
                     {services_data.map((x, idx) => (
-                        <div ref={srv_tab[idx + 1]}>
+                        <div ref={srv_tab[idx + 1]} key={idx}>
                             <ServiceTab
                                 service={x}
                                 idx={idx}
                                 open={toggleInfo == idx + 1 ? true : false}
                                 toggle={setToggleInfo}
-                                width={toggleInfo == idx + 1 ? "90%" : "90%"}
+                                width="90%"
                             />
                         </div>
                     ))}

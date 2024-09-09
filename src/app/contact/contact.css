@@ -5,26 +5,22 @@
     flex-direction: column;
     align-items: center;
     color: rgb(151, 255, 255);
+    background-color: rgba(58, 84, 107, 0.707);
+    padding-bottom: 100px;
 }
 
 #contact_body {
-    padding: 20px;
-    margin: auto;
-    margin-bottom: auto;
     width: 90vw;
-    background-color: rgba(58, 84, 107, 0.707);
     display: flex;
-
     justify-content: space-around;
 }
 #contact_text {
-    margin: 40px;
-    width: 40%;
+    margin-top: 100px;
+    padding-right: 20px;
 }
 
 #contact_text p {
-    display: inline;
-    text-align: justify;
+    text-align: justify !important;
 }
 
 .contact_form {
@@ -51,28 +47,57 @@
     padding-left: 0px;
 }
 @media only screen and (max-width: 700px) {
+    #contact_text p {
+        font-size: 14px !important;
+    }
+}
+@media only screen and (max-width: 600px) {
     #contact_body {
         flex-direction: column-reverse;
     }
     #contact_text {
-        margin: 20px;
+        margin-top: 40px;
+        padding-right: 0px;
+
+        width: 100%;
+    }
+    .contact_form h2 {
         width: 100%;
     }
     .contact_form {
         width: 100%;
-        flex-direction: column;
-        align-items: center !important;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: start;
     }
+
     .social_links {
         display: flex;
-        font-size: 13px;
+        flex-direction: column;
+        font-size: 14px;
         justify-content: space-around;
-        width: 100%;
+        max-width: 30%;
         border-top: none;
         padding-top: 0px;
+
+        margin: auto;
         margin-top: 0px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.409);
         padding-bottom: 10px;
         margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .social_links {
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 100%;
+        padding-top: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.409);
+        margin-bottom: 0px;
+    }
+
+    .contact_form #contactForm {
+        width: 90vw;
     }
 }

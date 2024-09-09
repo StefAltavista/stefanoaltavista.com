@@ -135,7 +135,11 @@ export default function ProjectsPreview({
             </div>
             {toggle && proj && (
                 <div
-                    onClick={() => closeProjectCard()}
+                    onClick={(e) => {
+                        e.stopPropagation();
+
+                        closeProjectCard();
+                    }}
                     className="projectCard_homePreview"
                 >
                     <div ref={projectPreview_card}>
@@ -155,10 +159,10 @@ export default function ProjectsPreview({
                             <p>Read More </p>
                         </Link>
 
-                        <Link href={`/projects/${proj.url}`}>
+                        <Link href={`${proj.url}`} target="blank">
                             <p> Visit Website</p>
                         </Link>
-                        <Link href={`/projects/${proj.gitHub}`}>
+                        <Link href={`${proj.gitHub}`} target="blank">
                             <p>GitHub</p>
                         </Link>
                     </div>

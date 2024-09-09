@@ -45,11 +45,11 @@ export default async function Project({ params }: projectPageParams) {
                             />
                         </div>
                         <div>
-                            <p id="pTitle">{project.title}</p>
-                            <p id="pSub">{project.subtitle}</p>
-                            <p className="margin">
+                            <div id="pTitle">{project.title}</div>
+                            <div id="pSub">{project.subtitle}</div>
+                            <div className="margin">
                                 {newline(project.technologies)}
-                            </p>
+                            </div>
 
                             <div id="links">
                                 {project.name != "mobileapps" && (

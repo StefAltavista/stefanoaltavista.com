@@ -3,18 +3,26 @@
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    padding-bottom: 100px;
 }
 #projects_body {
     width: 100vw;
 }
 .projects_header {
-    width: 100%;
-    padding: 50px;
-    text-align: right;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.518);
 }
 .projects_header p {
     text-align: right;
+    max-width: 65%;
+
     color: aqua;
+    font-size: 15px !important;
+    line-height: 25px;
+    padding-bottom: 10px;
 }
 
 .projects_board {
@@ -31,5 +39,17 @@
 @media only screen and (max-width: 700px) {
     #projects_body h2 {
         padding-left: 30px;
+    }
+    .projects_header p {
+        max-width: 85%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #projects_body h2 {
+        padding-left: 30px;
+    }
+    .projects_header p {
+        max-width: 95%;
     }
 }

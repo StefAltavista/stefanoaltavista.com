@@ -79,4 +79,7 @@ a {
         flex-wrap: wrap;
         justify-content: center;
     }
+    .footer_section #contactForm {
+        width: 90vw !important;
+    }
 }
