@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { useEffect, useState } from "react";
 
 export default function Background() {
-    const [popUp, setPopUp] = useState(false);
+    let popUp = false;
     useGSAP(() => {
         gsap.from("#background_animation", { opacity: 0, duration: 1 });
     }, []);
@@ -21,7 +21,7 @@ export default function Background() {
     ) {
         render = <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />;
     } else {
-        setPopUp(true);
+        popUp = true;
 
         render = <NextReactP5Wrapper sketch={WaveSimple} id="canvas" />;
     }
@@ -46,7 +46,7 @@ export default function Background() {
             {popUp && (
                 <div
                     id="popUp"
-                    onClick={() => setPopUp(false)}
+                    onClick={() => (popUp = false)}
                     style={{
                         boxSizing: "border-box",
                         zIndex: 5,
