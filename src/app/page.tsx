@@ -39,13 +39,13 @@ export default async function Home() {
                     </div>
                 </div>
 
-                <div className="home_section ">
+                <div className="home_section">
                     <h2 className="agraham">
                         I offer various tailored solutions
                     </h2>
                     <div className="home_services">
                         {services_data.map((x, idx) => (
-                            <Link href={`/services?s=${idx + 1}`}>
+                            <Link href={`/services?s=${idx + 1}`} key={idx}>
                                 <div className="home_service_div" key={idx}>
                                     <Image
                                         src={x.icon}

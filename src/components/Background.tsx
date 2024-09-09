@@ -21,9 +21,8 @@ export default function Background() {
     ) {
         render = <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />;
     } else {
-        useEffect(() => {
-            setPopUp(true);
-        }, []);
+        setPopUp(true);
+
         render = <NextReactP5Wrapper sketch={WaveSimple} id="canvas" />;
     }
 

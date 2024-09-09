@@ -26,17 +26,14 @@ const techLogos = [
     "/images/techLogos/25.png",
     "/images/techLogos/26.svg",
 ];
+import Image from "next/image";
 import "./techStack.css";
 export default function TechStack() {
     return (
         <div id="technologies">
             <div>
                 {techLogos.map((x, idx) => (
-                    <img
-                        src={x}
-                        key={idx}
-                        alt="Stefano Altavista Web Developer"
-                    />
+                    <Image src={x} key={idx} alt="" width={100} />
                 ))}
             </div>
         </div>

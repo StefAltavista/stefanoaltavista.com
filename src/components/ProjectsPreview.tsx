@@ -14,10 +14,6 @@ export default function ProjectsPreview({
 }: {
     projects: Projects[];
 }) {
-    if (!projects) {
-        return <p>Error fetching data</p>;
-    }
-
     const homeProjectScope = useRef<HTMLInputElement>(null);
     const projectPreview_card = useRef<HTMLInputElement>(null);
     const [toggle, setToggle] = useState<boolean>(false);

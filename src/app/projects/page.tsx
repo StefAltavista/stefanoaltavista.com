@@ -23,8 +23,8 @@ export default async function Projects() {
                         </p>
                     </div>
 
-                    {projects?.map((x) => (
-                        <ProjectCard project={x} />
+                    {projects?.map((x, idx) => (
+                        <ProjectCard project={x} key={idx} />
                     ))}
                 </div>
             </div>

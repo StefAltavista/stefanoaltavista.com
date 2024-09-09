@@ -81,7 +81,13 @@ export default async function Project({ params }: projectPageParams) {
 
                     <div id="pImages">
                         {project.images.map((x, i) => (
-                            <img src={x} key={i} id="pImg" />
+                            <Image
+                                src={x}
+                                key={i}
+                                id="pImg"
+                                alt={`${project.name} image`}
+                                width={600}
+                            />
                         ))}
                     </div>
                 </div>

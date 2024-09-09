@@ -32,7 +32,7 @@ export default function Services() {
                 });
             }, 1000);
         }
-    }, [toggleInfo]);
+    });
     return (
         <div id="servives_page">
             <NavBar

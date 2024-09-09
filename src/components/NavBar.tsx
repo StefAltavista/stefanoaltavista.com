@@ -36,7 +36,7 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
 
             return () => window.removeEventListener("scroll", scrollLeft);
         }
-    }, []);
+    });
     return (
         <div
             className={location === "/" ? "navBarScroll" : "navBarFixed"}

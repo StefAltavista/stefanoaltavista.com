@@ -21,7 +21,7 @@ export default function Contact() {
             <div id="contact_body">
                 <div id="contact_text">
                     <p className="small_courier">
-                        Whether you're looking to collaborate on an exciting
+                        Whether you are looking to collaborate on an exciting
                         project, need assistance with a web development task, or
                         want to explore new opportunities:
                     </p>
@@ -30,12 +30,12 @@ export default function Contact() {
                     <br></br>
                     <p className="small_courier">
                         As a freelance web developer with a passion for tackling
-                        new challenges, I'm always open to discussing how I can
+                        new challenges, I am always open to discussing how I can
                         help bring your ideas to life. <br></br>
                         <br></br>Feel free to reach out for any inquiries,
                         service requests, or potential job opportunities.{" "}
                     </p>
-                    <p className="agraham">Let's develop.</p>
+                    <p className="agraham">{`Let&aposs develop`}</p>
                 </div>
                 <div className="contact_form">
                     <h2 className="agraham">Contact</h2>

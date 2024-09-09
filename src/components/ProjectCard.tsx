@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { type Projects as Project } from "@prisma/client";
 import "./projectCard.css";
+import Image from "next/image";
 
 export default function ProjectCard({ project }: { project: Project }) {
     return (
@@ -22,7 +23,11 @@ export default function ProjectCard({ project }: { project: Project }) {
                     <h3>{project.title}</h3>
                 </div>
 
-                <img src={project.logo} id="projLogo" />
+                <Image
+                    src={project.logo}
+                    id="projLogo"
+                    alt={`${project.name} logo`}
+                />
                 <p> {project.subtitle}</p>
             </div>
         </Link>
