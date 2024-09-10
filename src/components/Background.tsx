@@ -7,24 +7,21 @@ import { useGSAP } from "@gsap/react";
 import { useEffect, useState } from "react";
 
 export default function Background() {
-    let popUp = false;
+    const [popUp, setPopUp] = useState(false);
+
     useGSAP(() => {
         gsap.from("#background_animation", { opacity: 0, duration: 1 });
     }, []);
-    let render;
 
-    if (navigator.userAgent.includes("Chrome")) {
-        render = <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />;
-    } else if (
-        navigator.userAgent.includes("iPhone") ||
-        navigator.userAgent.includes("Mozzilla")
-    ) {
-        render = <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />;
-    } else {
-        popUp = true;
-
-        render = <NextReactP5Wrapper sketch={WaveSimple} id="canvas" />;
-    }
+    useEffect(() => {
+        if (
+            !navigator.userAgent.includes("Chrome") &&
+            (!navigator.userAgent.includes("iPhone") ||
+                !navigator.userAgent.includes("Mozzilla"))
+        ) {
+            setPopUp(true);
+        }
+    }, []);
 
     return (
         <>
@@ -41,12 +38,19 @@ export default function Background() {
                     overflow: "hidden",
                 }}
             >
-                {render}
+                {navigator.userAgent.includes("Chrome") ? (
+                    <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />
+                ) : navigator.userAgent.includes("iPhone") ||
+                  navigator.userAgent.includes("Mozzilla") ? (
+                    <NextReactP5Wrapper sketch={WaveComplex} id="canvas" />
+                ) : (
+                    <NextReactP5Wrapper sketch={WaveSimple} id="canvas" />
+                )}
             </div>
             {popUp && (
                 <div
                     id="popUp"
-                    onClick={() => (popUp = false)}
+                    onClick={() => setPopUp(false)}
                     style={{
                         boxSizing: "border-box",
                         zIndex: 5,

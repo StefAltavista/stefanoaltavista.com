@@ -33,7 +33,7 @@ export default function TechStack() {
         <div id="technologies">
             <div>
                 {techLogos.map((x, idx) => (
-                    <Image src={x} key={idx} alt="" width={100} />
+                    <Image src={x} key={idx} alt="" width={100} height={100} />
                 ))}
             </div>
         </div>
