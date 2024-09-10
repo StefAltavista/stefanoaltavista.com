@@ -11,7 +11,7 @@ export const sendMessage = async (
         `<strong>Object:</strong><p><br></br>${object}</p> ` +
         `<strong>Message:</strong><br></br><p>${content}</p> </div> `;
 
-    return fetch("https://127.0.0.1:1111/api/contact", {
+    return fetch("http://127.0.0.1:1111/api/contact", {
         headers: {
             "Content-type": "application/json",
             Authorization: "FuckYouWhatAreYouEvenTryingToGet?",
