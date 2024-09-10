@@ -35,7 +35,7 @@ export default async function Home() {
                             <TW_intro />
                         </div>
                         <Acii_avatar control={true} size={0.8} />
-                        <p className="small_courier">Welcome to my Website!</p>
+                        {/* <p className="small_courier">Welcome to my Website!</p> */}
                     </div>
                 </div>
 
