@@ -11,6 +11,12 @@
     transform-origin: top center;
     transform: translateY(2);
     transform: scale(0.8, 0.8);
+    /* scale */
+
+    font-size: 4px;
+    line-height: 5px;
+    letter-spacing: 2px;
+    margin-right: -100px;
 }
 #ascii_avatar input {
     margin: 10px;
@@ -74,4 +80,20 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]:focus::-moz-range-thumb {
     outline: 0px solid #a8b4f0;
     outline-offset: 0.125rem;
+}
+
+@media only screen and(max-width:700) {
+    #ascii_avatar pre {
+        font-size: 3px;
+        line-height: 4px;
+        letter-spacing: 2px;
+    }
+}
+
+@media only screen and(max-width:500px) {
+    #ascii_avatar pre {
+        font-size: 2px;
+        line-height: 3px;
+        letter-spacing: 1px;
+    }
 }

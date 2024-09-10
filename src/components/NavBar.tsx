@@ -55,7 +55,7 @@ export default function NavBar({ options }: { options: NavBarOptions }) {
                         >
                             {width && width > 800
                                 ? `Stefano Altavista Mascitti`
-                                : "S A M "}
+                                : "SAM "}
                         </p>
                     </a>
                 </div>

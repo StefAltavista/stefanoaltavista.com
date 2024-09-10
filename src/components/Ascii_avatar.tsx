@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./ascii_avatar.css";
-
+import { useWindowSize } from "@uidotdev/usehooks";
 export default function Acii_avatar({
     control = true,
     size,
@@ -10,20 +10,25 @@ export default function Acii_avatar({
     size: number;
 }) {
     const [scale, setScale] = useState(size);
+    const { width } = useWindowSize();
+    useEffect(() => {
+        if (width && width < 700) {
+            setScale(size - 0.1);
+        }
+        if (width && width < 500) {
+            setScale(size - 0.2);
+        }
+    }, [width, scale]);
 
     const scaleAvatar = (x: string) => {
         let value = Number(x);
         setScale(value);
     };
+
     return (
         <div id="ascii_avatar">
             <pre
                 style={{
-                    fontSize: "4px",
-                    // fontWeight: 100,
-                    lineHeight: "5px",
-                    letterSpacing: "2px",
-                    marginRight: "-100px",
                     transform: `scale(${scale},${scale})`,
                 }}
             >{`

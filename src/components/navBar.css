@@ -112,6 +112,12 @@ p {
 }
 @media only screen and (max-width: 500px) {
     #navBar .navBar_links p {
-        font-size: 13px;
+        font-size: 12px;
+    }
+    #navBar .navBar_links a:last-child {
+        margin-right: 10px;
+    }
+    .navBar_title {
+        font-size: 14px;
     }
 }

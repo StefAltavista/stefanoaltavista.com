@@ -43,3 +43,20 @@
         margin-top: 50px;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    #sam h3 {
+        font-size: 40px;
+    }
+    #nameTitleInline p {
+        font-size: 13px !important;
+    }
+    #sam p {
+        font-size: 13px;
+        max-width: 70vw;
+        margin-top: 20px;
+    }
+    #sam p:nth-child(1) {
+        margin-top: 50px;
+    }
+}

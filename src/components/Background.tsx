@@ -13,15 +13,16 @@ export default function Background() {
         gsap.from("#background_animation", { opacity: 0, duration: 1 });
     }, []);
 
-    useEffect(() => {
-        if (
-            !navigator.userAgent.includes("Chrome") &&
-            (!navigator.userAgent.includes("iPhone") ||
-                !navigator.userAgent.includes("Mozzilla"))
-        ) {
-            setPopUp(true);
-        }
-    }, []);
+    //Safari PopUp Warning temporary removed
+    // useEffect(() => {
+    //     if (
+    //         !navigator.userAgent.includes("Chrome") &&
+    //         (!navigator.userAgent.includes("iPhone") ||
+    //             !navigator.userAgent.includes("Mozzilla"))
+    //     ) {
+    //         setPopUp(true);
+    //     }
+    // }, []);
 
     return (
         <>

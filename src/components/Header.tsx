@@ -14,6 +14,7 @@ export default function Header() {
     const sam = useRef<HTMLInputElement>(null);
 
     useGSAP(() => {
+        gsap.to("#header", { visibility: "visible", duration: 0 });
         gsap.from(nameTitle.current, { opacity: 0, duration: 4, delay: 1 });
         gsap.from(nameSubTitle.current, { x: "200%", duration: 3, delay: 2 });
         gsap.from(nameDescription.current, {
@@ -38,7 +39,7 @@ export default function Header() {
 
     return (
         <>
-            <div id="header">
+            <div id="header" style={{ visibility: "hidden" }}>
                 <div id="sam" ref={sam}>
                     <div id="nameTitle">
                         <Link href={`./about`}>

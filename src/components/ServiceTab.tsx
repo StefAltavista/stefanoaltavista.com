@@ -33,7 +33,7 @@ export default function Service_tab({
                     className="service_icon"
                 />
                 <div className={open ? "expand" : "shrink"}></div>
-                <h2>{service.title}</h2>
+                <h2 className={open ? "selected" : ""}>{service.title}</h2>
             </div>
             <div className={`service_info ${open ? "open" : "close"}`}>
                 <p>{service.description}</p>
