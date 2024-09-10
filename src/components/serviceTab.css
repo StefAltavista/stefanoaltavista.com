@@ -9,7 +9,12 @@
     color: rgb(10, 59, 59);
     transition: 1s;
 }
-
+.service_tab p,
+.service_tab h1,
+.service_tab h2,
+.service_tab h3 {
+    text-shadow: none !important;
+}
 .service_tab div {
     display: flex;
     justify-content: flex-start;

@@ -19,6 +19,8 @@
 #projectCard p {
     text-align: center !important;
     letter-spacing: 2px;
+
+    text-shadow: none !important;
 }
 #head {
     display: flex;

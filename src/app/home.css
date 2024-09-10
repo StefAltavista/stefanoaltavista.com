@@ -64,6 +64,12 @@
     width: 200px;
     height: 200px;
 }
+.home_service_div p,
+.home_service_div h1,
+.home_service_div h2,
+.home_service_div h3 {
+    text-shadow: none !important;
+}
 .home_service_div img {
     width: 100px;
     margin: 0;

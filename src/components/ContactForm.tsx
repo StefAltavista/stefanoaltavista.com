@@ -87,7 +87,12 @@ export default function ContactForm() {
                                 }
                             ></textarea>
                         </div>
-                        <button type="submit" onSubmit={handleSubmit}>
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault();
+                                handleSubmit();
+                            }}
+                        >
                             Send
                         </button>
                         <div

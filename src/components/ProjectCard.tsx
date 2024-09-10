@@ -26,6 +26,8 @@ export default function ProjectCard({ project }: { project: Project }) {
                 <Image
                     src={project.logo}
                     id="projLogo"
+                    width={200}
+                    height={200}
                     alt={`${project.name} logo`}
                 />
                 <p> {project.subtitle}</p>
