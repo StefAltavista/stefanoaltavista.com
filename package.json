@@ -17,6 +17,7 @@
         "@uidotdev/usehooks": "^2.4.1",
         "gsap": "^3.12.5",
         "next": "14.2.5",
+        "nodemailer": "^6.9.15",
         "p5": "^1.10.0",
         "react": "^18",
         "react-dom": "^18",
@@ -25,6 +26,7 @@
         "typewriter-effect": "^2.21.0"
     },
     "devDependencies": {
+        "@types/nodemailer": "^6.4.15",
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",

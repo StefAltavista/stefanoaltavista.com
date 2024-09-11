@@ -78,3 +78,27 @@
     margin: 0px;
     margin-right: 10px;
 }
+
+.response {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center !important;
+}
+.response p {
+    text-shadow: none;
+    display: flex;
+    justify-content: center;
+    color: rgb(20, 22, 60) !important;
+}
+.response p:nth-child(1) {
+    text-shadow: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.331);
+}
+.response p:nth-child(2) {
+    text-align: center !important;
+    line-height: 50px;
+    font-size: 13px;
+    font-family: "agraham";
+}

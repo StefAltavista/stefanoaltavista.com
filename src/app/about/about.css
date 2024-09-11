@@ -5,6 +5,10 @@
     align-items: center;
     color: rgb(121, 206, 255);
 }
+
+#about_page #navBar p {
+    text-shadow: none !important;
+}
 #about_page #ascii_avatar pre {
     font-size: 5px !important;
     font-weight: 800;
