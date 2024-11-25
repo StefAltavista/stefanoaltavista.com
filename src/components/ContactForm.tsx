@@ -60,6 +60,7 @@ export default function ContactForm() {
             setSending(false);
             setSent(true);
         } catch (e) {
+            console.log("error sending email form:", e);
             setResponseMessage("error");
             setSending(false);
             setSent(true);

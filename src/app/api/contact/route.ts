@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     const { messageHTML } = await request.json();
     console.log(messageHTML);
     const transporter = nodemailer.createTransport({
-        service: "hotmail",
+        service: "gmail",
         auth: { user: EMAIL_FROM, pass: EMAIL_PASS },
     });
 
@@ -28,6 +28,7 @@ export async function POST(request: NextRequest) {
             message: "success",
         });
     } catch (e) {
+        console.log("error sending email on route:", e);
         return NextResponse.json({
             e,
             message: "error",
