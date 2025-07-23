@@ -3,6 +3,8 @@ const prisma = new PrismaClient();
 
 async function main() {
   // Insert multiple records
+  await prisma.projects.deleteMany();
+
   const users = await prisma.projects.createMany({
     data: [
       {
@@ -134,7 +136,7 @@ async function main() {
         description:
           "Within the realm of Web3: Wrong Image is a Glitch Art Generator and NFT minter based on P5js.\n7 different image manipulation algorithms, each of which has their own parameters that allow the user to glitch and blend pictures of multiple formats. \n\nThe finalized image can be downloaded or stored on the IPFS (Inter Planetary File System) the industrial standard for NFT storage. Once the picture is saved the user can access his own gallery, and mint each of those immages into the Polygon chain. \n\nWith the aid of NFTport API, the user can also query The Ethereum and Polygon blockchain to visualize the NFTS that belong to a given wallet address.\n\nThe user can access the website with his personal crypto wallet through Metamask.",
         technologies:
-          "Javascript - React - Express - Node.js - P5JS - PostgreSQL",
+          "Javascript - React - Express - Node.js - P5JS - PostgreSQL - NFTPort",
         type: "creative",
       },
 
